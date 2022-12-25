@@ -37,6 +37,7 @@
           <br/>
           <br/>
           When I'm not watching anime, or playing with my younger brother, I'm coding and listening to music (thus why this site is inspired by <a href="https://open.spotify.com/" target="_blank">Spotify</a>).
+          If you came to this page from the playlist card or the sidebar playlist link, I apologize. I know it's weird to have my "Spotify" profile linked from a playlist.
         </p>
       </div>
     </div>
@@ -166,9 +167,11 @@
 
 #profile-body a {
   color: white;
+  text-decoration:underline;
+  transition: 0.2s;
 }
 
 #profile-body a:hover {
-  text-decoration: underline;
+  color: lightblue;
 }
 </style>

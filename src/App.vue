@@ -386,4 +386,94 @@ ul {
   opacity: 0;
   transition: 0.3s ease-in;
 }
+
+.playlist-songs {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: left;
+  width: 100%;
+}
+
+.song-container {
+  justify-content: left;
+  margin-left: 50px;
+  justify-content: space-evenly;
+  padding: 10px;
+  padding-right: 30px;
+  border-radius: 6px;
+}
+
+.song-container:hover{
+  background-color: #99999940!important;
+}
+
+.song-container:hover > * {
+  opacity: 1;
+}
+
+.song-container:hover .song-info div > * {
+  opacity: 1;
+}
+
+.song-header {
+  margin-right: auto;
+  gap: 15px;
+}
+
+.song-index {
+  opacity: 0.6;
+  font-size: 1.1rem;
+}
+
+.song-info {
+  width: 300px;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.song-info div {
+  gap: 5px;
+}
+
+.song-code {
+  color: white;
+}
+
+.song-header img {
+  width: 40px;
+}
+
+.song-time {
+  margin-left: auto;
+  opacity: 0.6;
+}
+
+.song-title {
+  cursor: pointer;
+}
+
+.song-languages {
+  font-size: 0.8rem;
+  margin-top: auto;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.song-languages:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.song-title:hover {
+  text-decoration: underline;
+}
+
+.song-code {
+  opacity: 0.6;
+}
+
+.song-code:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
 </style>

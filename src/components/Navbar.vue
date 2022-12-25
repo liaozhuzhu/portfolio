@@ -19,7 +19,7 @@
             <RouterLink to="/playlist/liao-zhu">Liao Zhu</RouterLink>
             <RouterLink to="/user">Profile</RouterLink>
             <RouterLink to="/playlist/projects">Projects</RouterLink>
-            <a href="./liaozhu.pdf" target="_blank">Resume</a>
+            <a href="../liaozhu.pdf" target="_blank">Resume</a>
         </ul>
     </div>
 </template>
