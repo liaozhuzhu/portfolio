@@ -20,6 +20,8 @@
             <RouterLink to="/user">Profile</RouterLink>
             <RouterLink to="/playlist/projects">Projects</RouterLink>
             <a href="../liaozhu.pdf" target="_blank">Resume</a>
+            <a href="https://github.com/liaozhuzhu" target="_blank">Github</a>
+            <a href="https://www.linkedin.com/in/liao-zhu/" target="_blank">Linkedin</a>
         </ul>
     </div>
 </template>

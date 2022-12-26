@@ -44,7 +44,7 @@
                             </div>
                         </div>
                     </div>
-                    <a :href="project.code" target="_blank" class="song-code">code</a>
+                    <a :href="project.code" target="_blank" class="song-code">Code</a>
                     <p class="song-time">{{ project.time }}</p>
                 </div>
             </div>
@@ -79,7 +79,7 @@ export default {
                 },
                 {
                     title: "QiT",
-                    languages: [["Python"], ["Flask"], ["MySQL"], ["AssemblyAI"]],
+                    languages: [["Python"], ["Flask"], ["MySQL"], ["Jinja"]],
                     code: "https://github.com/liaozhuzhu/qit",
                     time: "3:45",
                 },
@@ -137,7 +137,7 @@ export default {
 }
 
 #projects-page {
-    background-image: linear-gradient(to bottom, rgba(16, 90, 90, 200), rgba(16, 90, 90, 50));
+    background-image: linear-gradient(to bottom, rgba(10,35,30,255), rgba(15,28,25,255));
 }
     
 </style>

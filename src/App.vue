@@ -440,7 +440,9 @@ ul {
 }
 
 .song-header img {
-  width: 40px;
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
 }
 
 .song-time {

@@ -35,6 +35,16 @@
           <h1>Resume</h1>
           <fa class="play-icon container-flex" icon="fa-solid fa-play" />
         </a>
+        <a href="https://github.com/liaozhuzhu" target="_blank" class="container-flex" @mouseover="handleHover(5)" @mouseleave="handleLeave(5)">
+          <img src="../../static/images/github.png"/>
+          <h1>Github</h1>
+          <fa class="play-icon container-flex" icon="fa-solid fa-play" />
+        </a>
+        <a href="https://www.linkedin.com/in/liao-zhu/" target="_blank" class="container-flex" @mouseover="handleHover(6)" @mouseleave="handleLeave(6)">
+          <img src="../../static/images/linkedin.png"/>
+          <h1>Linkedin</h1>
+          <fa class="play-icon container-flex" icon="fa-solid fa-play" />
+        </a>
       </div>
     </div>
   </div>
