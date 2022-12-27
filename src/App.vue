@@ -599,4 +599,66 @@ ul {
 .song-desc a:hover {
   color: lightblue;
 }
+
+/* ===== Artist Pages ===== */
+.artist-intro-header {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.artist-intro-header div {
+  margin-top: auto;
+  gap: 10px; 
+}
+
+.fa-square-check {
+  color: rgba(62,145,244,255);
+  font-size: 1.5rem;
+}
+
+.artist-intro-header div p{
+  font-size: 0.9rem;
+}
+
+.artist-title {
+  font-size: 6rem;
+  margin-left: -7px;
+  margin-bottom: 15px;
+}
+
+.artist-listeners {
+  margin-bottom: 30px;
+}
+
+.artist-header {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 25px;
+}
+
+.artist-header .topbar {
+    width: 100%;
+}
+
+.artist-header .topbar {
+    background-color: transparent;
+}
+
+.artist-follow {
+  border: 1px solid grey;
+  padding: 9px;
+  padding-inline: 15px;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  cursor: default;
+}
+
+.artist-follow:hover {
+  border: 1px solid white;
+}
 </style>

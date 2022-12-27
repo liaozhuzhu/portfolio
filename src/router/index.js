@@ -13,6 +13,13 @@ import UIowaCatalog from "@/pages/CatalogClone.vue";
 import SortingVisualizer from "@/pages/SortingVisualizer.vue";
 import Statipy from "@/pages/StatipyVue.vue";
 
+import Mathnasium from "@/pages/MathnasiumInstructor.vue";
+import UIowaWebIntern from "@/pages/UIowaWebIntern.vue";
+import Collins from "@/pages/CollinsVue.vue";
+
+import Acm from "@/pages/AcmVue.vue";
+import Robotics from "@/pages/RoboticsVue.vue";
+
 const routes = [
 	{
 		path: "/",
@@ -70,6 +77,28 @@ const routes = [
 		path: "/track/statipy",
 		component: Statipy
 	},
+	// Experience Pages
+	{
+		path: "/experience/mathnasium-instructor",
+		component: Mathnasium
+	},
+	{
+		path: "/experience/uiowa-web-intern",
+		component: UIowaWebIntern,
+	},
+	{
+		path: "/experience/collins-software-engineer-intern",
+		component: Collins
+	},
+	/* ==== Extracurriculars ===== */
+	{
+		path: "/playlist/acm",
+		component: Acm
+	},
+	{
+		path: "/playlist/robotics",
+		component: Robotics
+	}
 ]
 
 

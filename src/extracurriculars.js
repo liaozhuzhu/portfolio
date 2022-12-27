@@ -1,12 +1,14 @@
 export const extracurriculars = [
     {
         title: "ACM",
-        src: "home.png",
-        desc: "",
+        artist: "Member",
+        src: "acm.png",
+        href: "/playlist/acm"
     },
     {
-        title: "UI Robotics",
-        src: "home.png",
-        desc: "",
+        title: "Robotics at Iowa",
+        artist: "Software Dev",
+        src: "robotics.png",
+        href: "/playlist/robotics"
     },
 ]

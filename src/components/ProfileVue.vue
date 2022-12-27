@@ -14,7 +14,7 @@
           <li class="container-flex"><RouterLink to="/user">Profile</RouterLink></li>
           <li class="container-flex"><RouterLink to="/playlist/projects">Projects</RouterLink></li>
           <li class="container-flex"><a href="./liaozhu.pdf" target="_blank">Resume</a></li>
-          <li class="container-flex"><a href="https://github.com/liaozhuzhu">Github</a></li>
+          <li class="container-flex"><a href="https://github.com/liaozhuzhu" target="_blank">Github</a></li>
         </ul>
       </ul>
     </div>
@@ -49,7 +49,7 @@
     </div>
     <h1 class="profile-section-title">Experience</h1>
     <div class="container-grid profile-cards-container">
-      <RouterLink to="/" class="container-flex column justify-content-left profile-cards" v-for="ex in experiences" :key="ex.src" @mouseover="togglePlayButton" @mouseleave="togglePlayButton">
+      <RouterLink :to="ex.href" class="container-flex column justify-content-left profile-cards" v-for="ex in experiences" :key="ex.src" @mouseover="togglePlayButton" @mouseleave="togglePlayButton">
         <img :src="require(`../../static/images/${ex.src}`)"/>
         <div class="container-flex column justify-content-left profile-cards-inner">
           <h1>{{ ex.title }}</h1>
@@ -61,10 +61,11 @@
     <br/>
     <h1 class="profile-section-title">Extracurriculars</h1>
     <div class="container-grid profile-cards-container">
-      <RouterLink to="/" class="container-flex column justify-content-left profile-cards" v-for="ec in extracurriculars" :key="ec.src" @mouseover="togglePlayButton" @mouseleave="togglePlayButton">
+      <RouterLink :to="ec.href" class="container-flex column justify-content-left profile-cards" v-for="ec in extracurriculars" :key="ec.src" @mouseover="togglePlayButton" @mouseleave="togglePlayButton">
           <img :src="require(`../../static/images/${ec.src}`)" class="ec-image"/>
-          <div class="container-flex column justify-content-left profile-cards-inner">
-            <h1 class="ec-title">{{ ec.title }}</h1>
+          <div class="container-flex column justify-content-left profile-cards-inner ec-desc">
+            <h1>{{ ec.title }}</h1>
+            <p>{{ ec.artist }}</p>
           </div>
           <fa class="play-icon container-flex playlist-play" icon="fa-solid fa-play"/>
       </RouterLink>
@@ -285,7 +286,7 @@
   border-radius: 6px !important;
 } 
 
-.ec-title {
-  margin-bottom: 30px;
+.ec-desc {
+  margin-bottom: 35px !important;
 }
 </style>

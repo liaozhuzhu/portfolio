@@ -14,7 +14,7 @@
                     <li class="container-flex"><RouterLink to="/user">Profile</RouterLink></li>
                     <li class="container-flex"><RouterLink to="/playlist/projects">Projects</RouterLink></li>
                     <li class="container-flex"><a href="./liaozhu.pdf" target="_blank">Resume</a></li>
-                    <li class="container-flex"><a href="https://github.com/liaozhuzhu">Github</a></li>
+                    <li class="container-flex"><a href="https://github.com/liaozhuzhu" target="_blank">Github</a></li>
                 </ul>
             </ul>
         </div>

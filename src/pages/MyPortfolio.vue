@@ -27,7 +27,7 @@
             </div>
         </div>
         <div class="container-flex justify-content-left playlist-settings">
-            <a href="/"><fa class="play-icon container-flex playlist-play" icon="fa-solid fa-play" style="opacity: 1"/></a>
+            <a href="../user"><fa class="play-icon container-flex playlist-play" icon="fa-solid fa-play" style="opacity: 1"/></a>
             <fa class="song-like" icon="fa-regular fa-heart" />
             <div class="container-flex justify-content-left" id="elipsis" @mouseover="togglePlaylistPopup" @mouseleave="closePlaylistPopup">
                 <fa icon="fa-solid fa-circle"/>
@@ -37,7 +37,7 @@
             </div>
         </div>
         <div class="container-flex justify-content-left song-desc">
-            <p>My online portfolio verson 14,325,214. I wanted to make my portfolio more fun and less bland. One app I use all the time is Spotify. Whether I'm working, doing homework, walking, or even going the gym, I'm always
+            <p>My online portfolio verson 14,325,214. I wanted to make my portfolio more fun and less bland. One app I use all the time is Spotify. Whether I'm working, doing homework, going to the gym, or even walking, I'm always
             listening to Spotify. So this portfolio version is supposed to be a fun version of Spotify.
             <br/>
             <br/>
