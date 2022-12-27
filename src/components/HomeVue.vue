@@ -1,6 +1,6 @@
 <template>
   <div class="section full-height">
-    <!-- <div class="container-flex topbar">
+    <div class="container-flex topbar">
       <div class="container-flex angle-container">
         <fa class="fa-angle" icon="fa-solid fa-angle-left" @click="this.$router.go(-1)"/>
         <fa class="fa-angle" icon="fa-solid fa-angle-right" @click="this.$router.go(1)"/>
@@ -17,8 +17,7 @@
           <li class="container-flex"><a href="https://github.com/liaozhuzhu" target="_blank">Github</a></li>
         </ul>
       </ul>
-    </div> -->
-    <TopbarVue/>
+    </div>
     <div class="container-flex column" id="home-container">
       <h1 class="greeting">{{ greeting }}</h1>
       <div class="container-grid">
@@ -58,7 +57,6 @@
 </template>
 
 <script>
-import TopbarVue from "@/components/TopbarVue.vue";
 export default {
     created(){
         document.title = "Liao Zhu - Web Player"
@@ -81,18 +79,18 @@ export default {
       }
     },
     methods: {
-      // toggleAccountDropdown() {
-      //   this.accountIsShowing = !this.accountIsShowing;
-      //   if (this.accountIsShowing) {
-      //     document.getElementById("caret-up").style.display="flex";
-      //     document.getElementById("caret-down").style.display="none";
-      //     document.getElementById("account-dropdown-container").style.display="flex";
-      //   } else {
-      //     document.getElementById("caret-up").style.display="none";
-      //     document.getElementById("caret-down").style.display="flex";
-      //     document.getElementById("account-dropdown-container").style.display="none";
-      //   }
-      // },
+      toggleAccountDropdown() {
+        this.accountIsShowing = !this.accountIsShowing;
+        if (this.accountIsShowing) {
+          document.getElementById("caret-up").style.display="flex";
+          document.getElementById("caret-down").style.display="none";
+          document.getElementById("account-dropdown-container").style.display="flex";
+        } else {
+          document.getElementById("caret-up").style.display="none";
+          document.getElementById("caret-down").style.display="flex";
+          document.getElementById("account-dropdown-container").style.display="none";
+        }
+      },
       handleHover(card) {
         for (let i = 0; i < document.getElementsByClassName("play-icon").length; i++) {
           if (card-1 == i) {
@@ -108,9 +106,6 @@ export default {
         }
       }
     },
-    components() {
-      TopbarVue
-    }
 }
 </script>
 
