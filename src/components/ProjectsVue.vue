@@ -31,14 +31,23 @@
                 <p id="playlist-popup">Haven't thought this far yet...</p>
             </div>
         </div>
+        <div class="playlist-keys container-flex">
+            <div class="container-flex">
+                <p class="key-index">#</p>
+                <p class="key-title">TITLE</p>
+            </div>
+            <p class="key-album">ALBUM</p>
+            <p class="key-time"><fa icon="fa-solid fa-clock"/></p>
+        </div>
+        <hr class="playlist-hr"/>
         <div class="playlist-songs">
             <div v-for="(project, projIndex) in projects" :key="project.title">
                 <div class="container-flex song-container">
                     <div class="container-flex song-header">
                         <p class="song-index">{{ projIndex + 1 }}</p>
-                        <img src="../../static/images/sig.png"/>
+                        <img :src="require(`../../static/images/${project.src}`)"/>
                         <div class="container-flex column justify-content-left song-info">
-                            <p class="song-title">{{ project.title }}</p>
+                            <a :href="'/track/'+ project.page" class="song-title">{{ project.title }}</a>
                             <div class="container-flex">
                                 <p v-for="(language, index) in project.languages" :key="language" class="song-languages">{{ language[0] }}<span v-if="index != project.languages.length - 1">, </span></p>
                             </div>
@@ -52,56 +61,14 @@
 </div>
 </template>
 <script>
+import { projects } from '../projects.js';
 export default {
     created() {
         document.title = "Liao Zhu - Projects"
     },
     data() {
         return {
-            projects: [
-                {
-                    title: "TikTok Video Generator",
-                    languages: [["Python"], ["MoviePy"], ["ZenQuote API"]],
-                    code: "https://github.com/liaozhuzhu/TikTokQuoteVideoGenerator",
-                    time: "2:56",
-                },
-                {
-                    title: "Clask",
-                    languages: [["Python"], ["Flask"], ["MySQL"], ["AssemblyAI"]],
-                    code: "https://github.com/liaozhuzhu/clask",
-                    time: "3:32",
-                },
-                {
-                    title: "My Portfolio",
-                    languages: [["Vue"]],
-                    code: "https://github.com/liaozhuzhu/portfolio",
-                    time: "1:46",
-                },
-                {
-                    title: "QiT",
-                    languages: [["Python"], ["Flask"], ["MySQL"], ["Jinja"]],
-                    code: "https://github.com/liaozhuzhu/qit",
-                    time: "3:45",
-                },
-                {
-                    title: "UIowa Course Search Clone",
-                    languages: [["Vue"], ["Maui API"]],
-                    code: "https://github.com/liaozhuzhu/its-project",
-                    time: "2:13",
-                },
-                {
-                    title: "Sorting Visualizer",
-                    languages: [["JavaScript"], ["HTML/CSS"]],
-                    code: "https://github.com/liaozhuzhu/sort",
-                    time: "4:10",
-                },
-                {
-                    title: "Statipy",
-                    languages: [["Python"], ["Discord API"], ["Spotify API"]],
-                    code: "https://github.com/liaozhuzhu/statipy",
-                    time: "3:20",
-                },
-            ]
+            projects: projects
         }
     },
     methods: {

@@ -13,7 +13,7 @@
             </ul>
         </div>
         <div class="container-flex justify-content-left playlist-header" id="liaozhu-header">
-            <img src="../../static/images/sig.png" style="object-fit: contain"/>
+            <img src="../../static/images/home.png" style="object-fit: contain"/>
             <div class="column">
                 <p class="playlist-category">PLAYLIST</p>
                 <h1 class="playlist-title">Liao Zhu</h1>
@@ -31,13 +31,22 @@
                 <p id="playlist-popup">Haven't thought this far yet...</p>
             </div>
         </div>
+        <div class="playlist-keys container-flex">
+            <div class="container-flex justify-content-left">
+                <p class="key-index">#</p>
+                <p class="key-title">TITLE</p>
+            </div>
+            <p class="key-album">ALBUM</p>
+            <p class="key-time"><fa icon="fa-solid fa-clock"/></p>
+        </div>
+        <hr class="playlist-hr"/>
         <div class="playlist-songs">
             <div class="container-flex song-container">
                     <div class="container-flex song-header">
                         <p class="song-index">1</p>
-                        <img src="../../static/images/sig.png"/>
+                        <img src="../../static/images/home.png"/>
                         <div class="container-flex column justify-content-left song-info">
-                            <p class="song-title">Home</p>
+                            <RouterLink to="/" class="song-title">Home</RouterLink>
                             <div class="container-flex">
                                 <p class="song-languages">Liao Zhu</p>
                             </div>
@@ -51,7 +60,7 @@
                         <p class="song-index">2</p>
                         <img src="../../static/images/profile.png"/>
                         <div class="container-flex column justify-content-left song-info">
-                            <p class="song-title">Profile</p>
+                            <RouterLink to="/user" class="song-title">Profile</RouterLink>
                             <div class="container-flex">
                                 <p class="song-languages">About me</p>
                             </div>
@@ -65,7 +74,7 @@
                         <p class="song-index">3</p>
                         <img src="../../static/images/projects.png"/>
                         <div class="container-flex column justify-content-left song-info">
-                            <p class="song-title">Projects</p>
+                            <RouterLink to="/playlist/projects" class="song-title">Projects</RouterLink>
                             <div class="container-flex">
                                 <p class="song-languages">Vue,</p>
                                 <p class="song-languages">JavaScript,</p>
@@ -85,7 +94,7 @@
                         <p class="song-index">{{ index + 4 }}</p>
                         <img :src="require(`../../static/images/${section.src}`)"/>
                         <div class="container-flex column justify-content-left song-info">
-                            <p class="song-title">{{ section.title }}</p>
+                            <a :href="section.code" target="_blank" class="song-title">{{ section.title }}</a>
                             <div class="container-flex">
                                 <p v-for="(language, index) in section.languages" :key="language" class="song-languages">{{ language[0] }}<span v-if="index != section.languages.length - 1">, </span></p>
                             </div>
