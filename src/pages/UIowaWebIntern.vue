@@ -12,7 +12,7 @@
                     <fa icon="fa-solid fa-caret-down" id="caret-down" />
                     <fa icon="fa-solid fa-caret-up" id="caret-up" style="display: none"/>
                 </ul>
-                <ul class="account-dropdown container-flex column justify-content-left" id="account-dropdown-container">
+                <ul class="account-dropdown container-flex column justify-content-left ex-account-dropdown" id="account-dropdown-container">
                     <li class="container-flex"><RouterLink to="/user">Profile</RouterLink></li>
                     <li class="container-flex"><RouterLink to="/playlist/projects">Projects</RouterLink></li>
                     <li class="container-flex"><a href="./liaozhu.pdf" target="_blank">Resume</a></li>

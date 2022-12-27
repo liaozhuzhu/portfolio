@@ -53,7 +53,7 @@
                         <p class="song-index">{{ projIndex + 1 }}</p>
                         <img :src="require(`../../static/images/${project.src}`)"/>
                         <div class="container-flex column justify-content-left song-info">
-                            <a :href="'/track/'+ project.page" class="song-title">{{ project.title }}</a>
+                            <RouterLink :to="project.page" class="song-title">{{ project.title }}</RouterLink>
                             <div class="container-flex">
                                 <p v-for="(language, index) in project.languages" :key="language" class="song-languages">{{ language[0] }}<span v-if="index != project.languages.length - 1">, </span></p>
                             </div>

@@ -1,7 +1,7 @@
 export const projects = [
     {
         title: "TikTok Video Generator",
-        page: "tiktok-video-generator",
+        page: "/track/tiktok-video-generator",
         src: "tiktok.jpeg",
         languages: [["Python"], ["MoviePy"], ["ZenQuote API"]],
         code: "https://github.com/liaozhuzhu/TikTokQuoteVideoGenerator",
@@ -9,7 +9,7 @@ export const projects = [
     },
     {
         title: "Clask",
-        page: "clask",
+        page: "/track/clask",
         src: "clask.png",
         languages: [["Python"], ["Flask"], ["MySQL"], ["AssemblyAI"]],
         code: "https://github.com/liaozhuzhu/clask",
@@ -17,7 +17,7 @@ export const projects = [
     },
     {
         title: "My Portfolio",
-        page: "my-portfolio",
+        page: "/track/my-portfolio",
         src: "home.png",
         languages: [["Vue"]],
         code: "https://github.com/liaozhuzhu/portfolio",
@@ -25,7 +25,7 @@ export const projects = [
     },
     {
         title: "QiT",
-        page: "qit",
+        page: "/track/qit",
         src: "qit.png",
         languages: [["Python"], ["Flask"], ["MySQL"], ["Jinja"]],
         code: "https://github.com/liaozhuzhu/qit",
@@ -33,7 +33,7 @@ export const projects = [
     },
     {
         title: "UIowa Course Search Clone",
-        page: "uiowa-course-search-clone",
+        page: "/track/uiowa-course-search-clone",
         src: "iowa.png",
         languages: [["Vue"], ["Maui API"]],
         code: "https://github.com/liaozhuzhu/its-project",
@@ -41,7 +41,7 @@ export const projects = [
     },
     {
         title: "Sorting Visualizer",
-        page: "sorting-visualizer",
+        page: "/track/sorting-visualizer",
         src: "sort.png",
         languages: [["JavaScript"], ["HTML/CSS"]],
         code: "https://github.com/liaozhuzhu/sort",
@@ -49,7 +49,7 @@ export const projects = [
     },
     {
         title: "Statipy",
-        page: "statipy",
+        page: "/track/statipy",
         src: "statipy.png",
         languages: [["Python"], ["Discord API"], ["Spotify API"]],
         code: "https://github.com/liaozhuzhu/statipy",

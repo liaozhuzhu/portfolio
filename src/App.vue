@@ -219,7 +219,7 @@ ul {
 
 .account-dropdown {
   position: absolute;
-  background-color: inherit;
+  background-color: rgb(30, 30, 30);
   top: 100%;
   right: 0;
   width: 200px;
@@ -255,6 +255,11 @@ ul {
   cursor: default;
   color: white;
   width: 100%;
+}
+
+.ex-account-dropdown {
+  top: 50px;
+  right: 20px;
 }
 
 .fa-caret-up {
