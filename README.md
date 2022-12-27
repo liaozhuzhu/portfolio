@@ -1,6 +1,6 @@
 # 🚧 WORK IN PROGRESS 🚧
 
-**Temp** deployment: https://temp-liaozhu.netlify.app/
+**Temp** deployment: https://liaozhu.netlify.app/
 
 - Responsiveness
 - Work on Topbar component implementation with each page
