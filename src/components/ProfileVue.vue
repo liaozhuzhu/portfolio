@@ -10,6 +10,12 @@
         <h1>liaozhuu</h1>
         <fa icon="fa-solid fa-caret-down" id="caret-down" />
         <fa icon="fa-solid fa-caret-up" id="caret-up" style="display: none"/>
+        <ul class="account-dropdown container-flex column justify-content-left" id="account-dropdown-container">
+          <li class="container-flex"><RouterLink to="/user">Profile</RouterLink></li>
+          <li class="container-flex"><RouterLink to="/playlist/projects">Projects</RouterLink></li>
+          <li class="container-flex"><a href="./liaozhu.pdf" target="_blank">Resume</a></li>
+          <li class="container-flex"><a href="https://github.com/liaozhuzhu">Github</a></li>
+        </ul>
       </ul>
     </div>
 
@@ -41,11 +47,34 @@
         </p>
       </div>
     </div>
-    
+    <h1 class="profile-section-title">Experience</h1>
+    <div class="container-grid profile-cards-container">
+      <RouterLink to="/" class="container-flex column justify-content-left profile-cards" v-for="ex in experiences" :key="ex.src" @mouseover="togglePlayButton" @mouseleave="togglePlayButton">
+        <img :src="require(`../../static/images/${ex.src}`)"/>
+        <div class="container-flex column justify-content-left profile-cards-inner">
+          <h1>{{ ex.title }}</h1>
+          <p>{{ ex.artist }}</p>
+        </div>
+        <fa class="play-icon container-flex playlist-play" icon="fa-solid fa-play"/>
+      </RouterLink>
+    </div>
+    <br/>
+    <h1 class="profile-section-title">Extracurriculars</h1>
+    <div class="container-grid profile-cards-container">
+      <RouterLink to="/" class="container-flex column justify-content-left profile-cards" v-for="ec in extracurriculars" :key="ec.src" @mouseover="togglePlayButton" @mouseleave="togglePlayButton">
+          <img :src="require(`../../static/images/${ec.src}`)" class="ec-image"/>
+          <div class="container-flex column justify-content-left profile-cards-inner">
+            <h1 class="ec-title">{{ ec.title }}</h1>
+          </div>
+          <fa class="play-icon container-flex playlist-play" icon="fa-solid fa-play"/>
+      </RouterLink>
+    </div>
 </div>
 </template>
 
 <script>
+  import { experiences } from '../experiences.js';
+  import { extracurriculars } from '../extracurriculars.js';
     export default {
         name: "ProfileVue",
         created(){
@@ -54,7 +83,10 @@
         data() {
           return {
             aboutShowing: true,
-            aboutShowingText: "Hide about me"
+            aboutShowingText: "Hide about me",
+            experiences: experiences,
+            extracurriculars: extracurriculars,
+            playBtnShowing: false,
           }
         },
         methods: {
@@ -79,15 +111,21 @@
           },
           toggleAccountDropdown() {
             this.accountIsShowing = !this.accountIsShowing;
-            console.log(this.accountIsShowing);
             if (this.accountIsShowing) {
               document.getElementById("caret-up").style.display="flex";
               document.getElementById("caret-down").style.display="none";
+              document.getElementById("account-dropdown-container").style.display="flex";
             } else {
               document.getElementById("caret-up").style.display="none";
               document.getElementById("caret-down").style.display="flex";
+              document.getElementById("account-dropdown-container").style.display="none";
             }
           },
+          togglePlayButton() {
+            if (!this.playBtnShowing) {
+              this.playBtnShowing = true;
+            }
+          }
 
         }
     }
@@ -101,7 +139,6 @@
 
 #profile-page {
   background-image: linear-gradient(to bottom, rgb(50, 60, 78), rgb(0, 0, 0));
-  outline: 5px solid red;
 }
 
 #profile-header {
@@ -173,5 +210,82 @@
 
 #profile-body a:hover {
   color: lightblue;
+}
+
+.profile-section-title {
+  margin: 25px;
+  font-size: 1.5rem;
+}
+
+.profile-cards-container {
+  grid-gap: 0;
+  margin: 0;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 100px));
+  grid-gap: 25px;
+  padding-left: 20px;
+  justify-content: left;
+  width: 100%;
+}
+
+.profile-cards {
+  background-color: rgba(24,25,24,255);
+  border-radius: 6px;
+  gap: 25px;
+  transition: 0.25s ease-in;
+  position: relative;
+}
+
+.profile-cards:hover {
+  background-color: #7d7d7d40!important;
+}
+
+.profile-cards img{
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-left: 0px;
+  margin-right: 0px;
+  filter: drop-shadow(0rem 1rem 1rem rgb(21, 21, 23));
+}
+
+.profile-cards div {
+  gap: 10px;
+  align-items: baseline;
+  width: 100%;
+  margin-inline-start: 20px;
+  margin-bottom: 20px;
+}
+
+.profile-cards h1 {
+  font-size: 0.9rem;
+  padding: none;
+}
+
+.profile-cards p {
+  opacity: 0.6;
+  font-size: 0.8rem;
+  color: white;
+}
+
+.play-icon {
+  position: absolute;
+  opacity: 1;
+  right: 20px;
+  bottom: 100px;
+  opacity: 0;
+  transition: 0.2s ease-in;
+}
+
+.profile-cards:hover .play-icon {
+  opacity: 1;
+}
+
+.ec-image {
+  border-radius: 6px !important;
+} 
+
+.ec-title {
+  margin-bottom: 30px;
 }
 </style>

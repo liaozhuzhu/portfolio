@@ -10,6 +10,12 @@
         <h1>liaozhuu</h1>
         <fa icon="fa-solid fa-caret-down" id="caret-down" />
         <fa icon="fa-solid fa-caret-up" id="caret-up" style="display: none"/>
+        <ul class="account-dropdown container-flex column justify-content-left" id="account-dropdown-container">
+          <li class="container-flex"><RouterLink to="/user">Profile</RouterLink></li>
+          <li class="container-flex"><RouterLink to="/playlist/projects">Projects</RouterLink></li>
+          <li class="container-flex"><a href="./liaozhu.pdf" target="_blank">Resume</a></li>
+          <li class="container-flex"><a href="https://github.com/liaozhuzhu">Github</a></li>
+        </ul>
       </ul>
     </div>
     <div class="container-flex column" id="home-container">
@@ -75,13 +81,14 @@ export default {
     methods: {
       toggleAccountDropdown() {
         this.accountIsShowing = !this.accountIsShowing;
-        console.log(this.accountIsShowing);
         if (this.accountIsShowing) {
           document.getElementById("caret-up").style.display="flex";
           document.getElementById("caret-down").style.display="none";
+          document.getElementById("account-dropdown-container").style.display="flex";
         } else {
           document.getElementById("caret-up").style.display="none";
           document.getElementById("caret-down").style.display="flex";
+          document.getElementById("account-dropdown-container").style.display="none";
         }
       },
       handleHover(card) {
@@ -103,4 +110,7 @@ export default {
 </script>
 
 <style scoped>
+.container-grid a h1 {
+  padding-left: 20px;
+}
 </style>

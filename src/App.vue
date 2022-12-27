@@ -61,6 +61,7 @@ ul {
   margin-left: 300px;
   background-image: linear-gradient(to bottom right, rgb(34, 18, 54), rgb(17, 11, 20),rgb(10, 10, 10));
   color: white;
+  padding-bottom: 100px;
 }
 
 .justify-content-left {
@@ -206,6 +207,7 @@ ul {
   cursor: pointer;
   border-radius: 16px;
   cursor: pointer;
+  position: relative;
 }
 
 #account-dropdown-menu img {
@@ -213,6 +215,46 @@ ul {
   height: 30px;
   object-fit: cover;
   border-radius: 50%;
+}
+
+.account-dropdown {
+  position: absolute;
+  background-color: inherit;
+  top: 100%;
+  right: 0;
+  width: 200px;
+  border-radius: 6px;
+  align-items: baseline;
+  padding: 5px;
+  justify-content: space-evenly;
+  font-size: 0.9rem;
+  cursor: default;
+  height: 200px;
+  display: none;
+}
+
+.account-dropdown li {
+  width: 100%;
+  opacity: 0.8;
+}
+
+.account-dropdown li:hover {
+  background-color: #99999940 !important;
+  opacity: 1;
+}
+
+.account-dropdown a {
+  display: flex;
+  gap: 8px;
+  height: 40px;
+  justify-content: space-between;
+  padding: 12px;
+  padding-inline-end: 8px;
+  position: relative;
+  text-align: start;
+  cursor: default;
+  color: white;
+  width: 100%;
 }
 
 .fa-caret-up {
@@ -273,7 +315,6 @@ ul {
   font-weight: 550;
   letter-spacing: 0.8px;
   font-size: 0.9rem;
-  padding-left: 20px;
 }
 
 .container-grid a img {

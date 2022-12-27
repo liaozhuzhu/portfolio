@@ -11,6 +11,12 @@
                 <fa icon="fa-solid fa-caret-down" id="caret-down" />
                 <fa icon="fa-solid fa-caret-up" id="caret-up" style="display: none"/>
             </ul>
+            <ul class="account-dropdown container-flex column justify-content-left" id="account-dropdown-container">
+                <li class="container-flex"><RouterLink to="/user">Profile</RouterLink></li>
+                <li class="container-flex"><RouterLink to="/playlist/projects">Projects</RouterLink></li>
+                <li class="container-flex"><a href="./liaozhu.pdf" target="_blank">Resume</a></li>
+                <li class="container-flex"><a href="https://github.com/liaozhuzhu">Github</a></li>
+            </ul>  
         </div>
         <div class="container-flex justify-content-left song-page-header">
             <img src="../../static/images/iowa.png"/>
@@ -57,16 +63,28 @@ export default {
             let playlistPopup = document.getElementById("playlist-popup");
             playlistPopup.style.opacity=0;
         },
+        toggleAccountDropdown() {
+        this.accountIsShowing = !this.accountIsShowing;
+        if (this.accountIsShowing) {
+          document.getElementById("caret-up").style.display="flex";
+          document.getElementById("caret-down").style.display="none";
+          document.getElementById("account-dropdown-container").style.display="flex";
+        } else {
+          document.getElementById("caret-up").style.display="none";
+          document.getElementById("caret-down").style.display="flex";
+          document.getElementById("account-dropdown-container").style.display="none";
+        }
+      },
     }
     
 }
 </script>
 <style scoped>
     .section {
-        background-image: linear-gradient(to bottom, rgb(27, 4, 80), black);
+        background-image: linear-gradient(to bottom, rgba(78,42,42,255), black);
     }
 
     .song-page-header {
-        background-image: linear-gradient(to bottom, rgb(46, 8, 196), rgb(25, 14, 100));
+        background-image: linear-gradient(to bottom, rgba(136,75,75,255), rgba(78,42,42,255));
     }
 </style>
