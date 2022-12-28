@@ -96,7 +96,7 @@ export default {
     methods: {
       async getAuth() {
       try {
-        const response = await axios.get('http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=liaozhuzhu&api_key=25edc6c4efea0c062a69a540f974de60&format=json');
+        const response = await axios.get('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=liaozhuzhu&api_key=25edc6c4efea0c062a69a540f974de60&format=json');
         console.log(response.data["recenttracks"]['track']);
         let track = response.data["recenttracks"]["track"];
         for (let i = 1; i < 6; i++) {

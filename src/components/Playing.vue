@@ -4,7 +4,7 @@
         <div class="playing-header">
             <img :src="`${ src }`"/>
             <div class="container-flex column">
-                <a :href="url"><h1>{{title}}</h1></a>
+                <a target="_blank" href="url"><h1>{{title}}</h1></a>
                 <p>{{ artist }}</p>
             </div>
             <fa icon="fa-regular fa-heart"></fa>
@@ -45,7 +45,7 @@ export default {
     methods: {
         async getPlaying() {
             try {
-                const response = await axios.get('http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=liaozhuzhu&api_key=25edc6c4efea0c062a69a540f974de60&format=json');
+                const response = await axios.get('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=liaozhuzhu&api_key=25edc6c4efea0c062a69a540f974de60&format=json');
                 let track = response.data["recenttracks"]["track"];
                 this.title = track[0]['name'];
                 this.artist = track[0]['artist']['#text'];
