@@ -41,8 +41,8 @@
             listening to Spotify. So this portfolio version is supposed to be a fun version of Spotify.
             <br/>
             <br/>
-            To get more practice with VueJS, I used Vue to make this portfolio. The end goal of this portfolio, is to use the Spotify Web App to display my personal Spotify stats and the song I'm 
-            currently listening to in order to make the site even more interesting.
+            To get more practice with VueJS, I used Vue to make this portfolio. This portfolio also displays the song I'm currently listening to, and the 5 most recent songs
+            I've listened to on the <RouterLink to="/">home page</RouterLink>.
             <br/>
             <br/>
             Though this portfolio is supposed to be an online resume, check out my real resume here: <a href="../../liaozhu.pdf" target="_blank">liaozhu.pdf</a>.

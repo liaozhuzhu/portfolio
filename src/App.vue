@@ -1,6 +1,7 @@
 <template>
   <div>
-    <Navbar/>
+    <Playing/>
+    <Navbar v-if="!$route.meta.hideNav"/>
     <!-- <Topbar/> -->
     <router-view />
   </div>
@@ -8,11 +9,12 @@
 
 <script>
 import Navbar from "@/components/Navbar.vue";
-
+import Playing from "@/components/Playing.vue";
 export default {
   name: 'App',
   components: {
     Navbar, 
+    Playing
   },
   data() {
     return {
@@ -20,6 +22,9 @@ export default {
   },
   methods: {
   },
+  created() {
+    console.log(this.$route.meta.hideNav);
+  }
 }
 </script>
 
@@ -61,7 +66,7 @@ ul {
   margin-left: 300px;
   background-image: linear-gradient(to bottom right, rgb(34, 18, 54), rgb(17, 11, 20),rgb(10, 10, 10));
   color: white;
-  padding-bottom: 100px;
+  padding-bottom: 130px;
 }
 
 .justify-content-left {
@@ -344,6 +349,11 @@ ul {
 
 .play-icon:hover {
   transform: scale(1.02);
+}
+
+.section-title {
+  margin: 25px;
+  font-size: 1.4rem;
 }
 
 /* ===== Playlist ===== */

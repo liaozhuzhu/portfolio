@@ -1,6 +1,6 @@
 import { createWebHistory, createRouter } from "vue-router"
 import Home from "@/components/HomeVue.vue"
-import PageNotFound from "@/components/PageNotFound.vue"
+// import Error from "@/components/ErrorVue.vue"
 import Profile from '@/components/ProfileVue.vue'
 import Projects from "@/components/ProjectsVue.vue";
 import LiaoZhu from "@/components/LiaoZhu.vue";
@@ -27,9 +27,11 @@ const routes = [
 		component: Home,
 	},
 	{
-		path: "/:catchAll(.*)*",
-		name: "PageNotFound",
-		component: PageNotFound,
+		path: '/:pathMatch(.*)*',
+		component: () => import('@/components/ErrorVue.vue'),
+		meta: {
+			hideNav: true,
+		}
 	},
 	{
 		path: "/user",

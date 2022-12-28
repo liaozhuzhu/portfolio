@@ -23,40 +23,53 @@
       <div class="container-grid">
         <RouterLink to="/playlist/liao-zhu" class="container-flex">
           <img src="../../static/images/home.png"/>
-          <h1>Liao Zhu</h1>
+          <h1 class="home-playlist-title">Liao Zhu</h1>
           <fa class="play-icon container-flex" icon="fa-solid fa-pause" style="opacity: 1"/>
         </RouterLink>
         <RouterLink to="/user" class="container-flex" @mouseover="handleHover(2)" @mouseleave="handleLeave(2)">
           <img src="../../static/images/profile.png"/>
-          <h1>Profile</h1>
+          <h1 class="home-playlist-title">Profile</h1>
           <fa class="play-icon container-flex" icon="fa-solid fa-play" />
         </RouterLink>
         <RouterLink to="/playlist/projects" class="container-flex" @mouseover="handleHover(3)" @mouseleave="handleLeave(3)">
           <img src="../../static/images/projects.png"/>
-          <h1>Projects</h1>
+          <h1 class="home-playlist-title">Projects</h1>
           <fa class="play-icon container-flex" icon="fa-solid fa-play" />
         </RouterLink>
         <a href="./liaozhu.pdf" target="_blank" class="container-flex" @mouseover="handleHover(4)" @mouseleave="handleLeave(4)">
           <img src="../../static/images/resume.png"/>
-          <h1>Resume</h1>
+          <h1 class="home-playlist-title">Resume</h1>
           <fa class="play-icon container-flex" icon="fa-solid fa-play" />
         </a>
         <a href="https://github.com/liaozhuzhu" target="_blank" class="container-flex" @mouseover="handleHover(5)" @mouseleave="handleLeave(5)">
           <img src="../../static/images/github.png"/>
-          <h1>Github</h1>
+          <h1 class="home-playlist-title">Github</h1>
           <fa class="play-icon container-flex" icon="fa-solid fa-play" />
         </a>
         <a href="https://www.linkedin.com/in/liao-zhu/" target="_blank" class="container-flex" @mouseover="handleHover(6)" @mouseleave="handleLeave(6)">
           <img src="../../static/images/linkedin.png"/>
-          <h1>Linkedin</h1>
+          <h1 class="home-playlist-title">Linkedin</h1>
           <fa class="play-icon container-flex" icon="fa-solid fa-play" />
         </a>
       </div>
+    </div>
+    <h1 class="section-title">Recently played</h1>
+    <div class="container-grid profile-cards-container">
+      <a :href="track.url" target="_blank" class="container-flex column justify-content-left profile-cards" v-for="track in recentTracks" :key="track.src">
+        <img :src="`${ track.src }`"/>
+        <div class="container-flex column justify-content-left">
+          <h1>{{ track.title }}</h1>
+          <p>{{ track.artist }}</p>
+        </div>
+        <fa class="play-icon container-flex" id="track-play-icon" icon="fa-solid fa-play"/>
+      </a>
     </div>
   </div>
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
     created(){
         document.title = "Liao Zhu - Web Player"
@@ -70,15 +83,35 @@ export default {
         } else {
           this.greeting = "Good evening";
         }
+        this.getAuth();
     },
     data() {
       return {
         accountIsShowing: false,
         timestamp: 0,
         greeting: "",
+        recentTracks: [],
       }
     },
     methods: {
+      async getAuth() {
+      try {
+        const response = await axios.get('http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=liaozhuzhu&api_key=25edc6c4efea0c062a69a540f974de60&format=json');
+        console.log(response.data["recenttracks"]['track']);
+        let track = response.data["recenttracks"]["track"];
+        for (let i = 1; i < 6; i++) {
+          this.recentTracks.push({
+            title: track[i]['name'],
+            artist: track[i]['artist']['#text'],
+            src: track[i]['image'][3]['#text'], 
+            url: track[i]['url'],
+          }) 
+        }
+        console.log(this.recentTracks)
+      } catch (error) {
+        console.error(error);
+      }
+    }, 
       toggleAccountDropdown() {
         this.accountIsShowing = !this.accountIsShowing;
         if (this.accountIsShowing) {
@@ -110,7 +143,75 @@ export default {
 </script>
 
 <style scoped>
-.container-grid a h1 {
+.home-playlist-title {
   padding-left: 20px;
+}
+
+.profile-cards-container {
+  grid-gap: 0;
+  margin: 0;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 100px));
+  grid-gap: 25px;
+  padding-left: 20px;
+  justify-content: left;
+  width: 100%;
+}
+
+.profile-cards {
+  background-color: rgba(24,25,24,255);
+  border-radius: 6px;
+  gap: 25px;
+  transition: 0.25s ease-in;
+  position: relative;
+}
+
+.profile-cards:hover {
+  background-color: #7d7d7d40!important;
+}
+
+.profile-cards img{
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-left: 0px;
+  margin-right: 0px;
+  filter: drop-shadow(0rem 1rem 1rem rgb(21, 21, 23));
+}
+
+.profile-cards div {
+  gap: 10px;
+  align-items: baseline;
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.profile-cards h1 {
+  width: 150px;
+  display: inline-block;
+  overflow: hidden;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-inline-start: 20px;
+}
+
+.profile-cards p {
+  opacity: 0.6;
+  font-size: 0.8rem;
+  color: white;
+}
+
+#track-play-icon {
+  position: absolute;
+  opacity: 1;
+  right: 0px;
+  bottom: 100px;
+  opacity: 0;
+  transition: 0.2s ease-in;
+}
+
+.profile-cards:hover #track-play-icon {
+  opacity: 1;
 }
 </style>

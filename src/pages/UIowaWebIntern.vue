@@ -96,6 +96,6 @@ export default {
     }
 
     .artist-header {
-        background-image: url("../../static/images/uiowabanner.png");
+        background-image: url("../../static/images/iowabanner.png");
     }
 </style>

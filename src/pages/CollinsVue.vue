@@ -24,7 +24,7 @@
                     <fa icon="fa-solid fa-square-check"/>
                     <p style="">Verified Artist</p>
                 </div>
-                <h1 class="artist-title" style="font-size: 4rem;">Collins Aerospace SWE Intern</h1>
+                <h1 class="artist-title" style="font-size: 4rem;">Incoming SWE Intern</h1>
                 <p class="artist-listeners">68,000 monthly listeners</p>
             </div>
         </div>

@@ -12,7 +12,7 @@ export const experiences = [
     href: "/experience/uiowa-web-intern",
   },
   {
-    title: "Software Engineer Intern",
+    title: "Incoming SWE Intern",
     artist: "Collins Aerospace",
     src: "collins.png",
     href: "/experience/collins-software-engineer-intern",
