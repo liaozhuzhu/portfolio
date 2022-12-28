@@ -17,8 +17,8 @@
         <br/>
         <ul class="navbar-list" id="playlist-list">
             <RouterLink to="/playlist/liao-zhu">Liao Zhu</RouterLink>
-            <RouterLink to="/user">Profile</RouterLink>
             <RouterLink to="/playlist/projects">Projects</RouterLink>
+            <RouterLink to="/user">Profile</RouterLink>
             <a href="../liaozhu.pdf" target="_blank">Resume</a>
             <a href="https://github.com/liaozhuzhu" target="_blank">Github</a>
             <a href="https://www.linkedin.com/in/liao-zhu/" target="_blank">Linkedin</a>

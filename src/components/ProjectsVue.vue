@@ -48,9 +48,10 @@
         <hr class="playlist-hr"/>
         <div class="playlist-songs">
             <div v-for="(project, projIndex) in projects" :key="project.title">
-                <div class="container-flex song-container">
+                <div class="container-flex song-container" @mouseover="handleSongHover(projIndex)" @mouseleave="handleSongLeave(projIndex)">
                     <div class="container-flex song-header">
-                        <p class="song-index">{{ projIndex + 1 }}</p>
+                        <p id="song-index-id" class="song-index">{{ projIndex + 1 }} </p>
+                        <fa id="playlist-song-play-icon" class="playlist-song-play" icon="fa-solid fa-play"/>
                         <img :src="require(`../../static/images/${project.src}`)"/>
                         <div class="container-flex column justify-content-left song-info">
                             <RouterLink :to="project.page" class="song-title">{{ project.title }}</RouterLink>
@@ -98,6 +99,14 @@ export default {
             let playlistPopup = document.getElementById("playlist-popup");
             playlistPopup.style.opacity=0;
         },
+        handleSongHover(index) {
+            document.getElementsByClassName("playlist-song-play")[index].style.display="flex";
+            document.getElementsByClassName("song-index")[index].style.opacity="0";
+        },
+        handleSongLeave(index) {
+            document.getElementsByClassName("playlist-song-play")[index].style.display="none";
+            document.getElementsByClassName("song-index")[index].style.opacity="0.6";
+        }
     }
 }
 </script>

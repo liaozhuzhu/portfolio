@@ -12,7 +12,8 @@
         <div class="playing-body">
             <fa icon="fa-solid fa-shuffle"/>
             <fa class="icon-settings select-icon" icon="fa-solid fa-backward-step" />
-            <fa class="icon-settings" icon="fa-solid fa-pause" />
+            <fa class="icon-settings" icon="fa-solid fa-pause" v-if="isPlaying"/>
+            <fa v-else class="icon-settings" icon="fa-solid fa-play"/>
             <fa class="icon-settings select-icon" icon="fa-solid fa-forward-step" />
             <fa icon="fa-solid fa-repeat" />
         </div>
@@ -24,13 +25,17 @@
             <fa icon="fa-solid fa-up-right-and-down-left-from-center"/>
         </div>
         </div>
-        <div class="currently-playing">
-            <p><fa icon="fa-solid fa-volume-high" /> Listening on Liao's Headphones</p>
+        <div class="currently-playing" v-if="isPlaying">
+            <p><fa icon="fa-solid fa-volume-high" /> Listening live on Liao's Headphones</p>
         </div>
     </div>
 </template>
 <script>
 import axios from "axios";
+let tempTitle;
+let tempArtist;
+let tempSrc;
+let tempUrl;
 export default {
     name: "PlayingVue",
     data() {
@@ -39,6 +44,7 @@ export default {
             artist: "",
             src: "",
             url: "",
+            isPlaying: true,
             volumeIsGreen: false,
         }
     },
@@ -47,20 +53,40 @@ export default {
             try {
                 const response = await axios.get('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=liaozhuzhu&api_key=25edc6c4efea0c062a69a540f974de60&format=json');
                 let track = response.data["recenttracks"]["track"];
-                this.title = track[0]['name'];
-                this.artist = track[0]['artist']['#text'];
-                this.src = track[0]['image'][3]['#text'];
-                this.url = track[0]['url'];
+                if ("@attr" in track[0]) {
+                    this.title = track[0]['name'];
+                    this.artist = track[0]['artist']['#text'];
+                    this.src = track[0]['image'][3]['#text'];
+                    this.url = track[0]['url'];
+                    this.isPlaying = true;
+                    tempTitle = this.title;
+                    tempArtist = this.artist;
+                    tempSrc = this.src;
+                    tempUrl = this.url;
+                } else {
+                    if (tempTitle == null) {
+                        tempTitle = track[0]['name'];
+                        tempArtist = track[0]['artist']['#text'];
+                        tempSrc = track[0]['image'][3]['#text'];
+                        tempUrl = track[0]['url'];
+                    }
+                    this.title = tempTitle;
+                    this.artist = tempArtist;
+                    this.src = tempSrc;
+                    this.url = tempUrl;
+                    this.isPlaying = false;
+                }
                 
             } catch (error) {
                 console.error(error);
             } 
         },     
     },
-    mounted: function () {
-            window.setInterval(() => {
-                this.getPlaying();
-            },500);
+    created: function () {
+        this.getPlaying();
+        window.setInterval(() => {
+            this.getPlaying();
+        }, 500);
     }
 }
 </script>
@@ -152,6 +178,15 @@ a {
 }
 
 .fa-pause {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.fa-play {
     background-color: white;
     color: black;
     padding: 10px;

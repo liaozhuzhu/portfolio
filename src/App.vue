@@ -490,6 +490,26 @@ ul {
   padding: 10px;
   padding-right: 30px;
   border-radius: 6px;
+  position: relative;
+}
+
+.playlist-song-play {
+  color: white;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 40%;
+  left: 10px;
+  display: none;
+}
+
+.song-header {
+  margin-right: auto;
+  gap: 15px;
+}
+
+.song-index {
+  opacity: 0.6;
+  font-size: 1.1rem;
 }
 
 .song-container:hover{
@@ -502,16 +522,6 @@ ul {
 
 .song-container:hover .song-info div > * {
   opacity: 1;
-}
-
-.song-header {
-  margin-right: auto;
-  gap: 15px;
-}
-
-.song-index {
-  opacity: 0.6;
-  font-size: 1.1rem;
 }
 
 .song-info {
@@ -675,5 +685,12 @@ ul {
 
 .artist-follow:hover {
   border: 1px solid white;
+}
+
+/* ===== Media Queries ===== */
+@media screen and (max-width: 1000px) {
+  body {
+    background-color: blue;
+  }
 }
 </style>

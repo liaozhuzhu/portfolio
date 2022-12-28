@@ -43,7 +43,7 @@
           <br/>
           <br/>
           When I'm not watching anime, or playing with my younger brother, I'm coding and listening to music (thus why this site is inspired by <a href="https://open.spotify.com/" target="_blank">Spotify</a>).
-          If you came to this page from the playlist card or the sidebar playlist link, I apologize. I know it's weird to have my "Spotify" profile linked from a playlist.
+          By the way, the currently playing song bar below is 100% accurate (from details, to pausing and playing, etc.) and live updates on its own. This way everyone can see what type of music I enjoy throughout my day!
         </p>
       </div>
     </div>

@@ -20,20 +20,20 @@
     </div>
     <div class="container-flex column" id="home-container">
       <h1 class="greeting">{{ greeting }}</h1>
-      <div class="container-grid">
-        <RouterLink to="/playlist/liao-zhu" class="container-flex">
+      <div class="container-grid home-playlist-container">
+        <RouterLink to="/playlist/liao-zhu" class="container-flex" @mouseover="handleHover(1)" @mouseleave="handleLeave(1)">
           <img src="../../static/images/home.png"/>
           <h1 class="home-playlist-title">Liao Zhu</h1>
-          <fa class="play-icon container-flex" icon="fa-solid fa-pause" style="opacity: 1"/>
+          <fa class="play-icon container-flex" icon="fa-solid fa-play"/>
         </RouterLink>
-        <RouterLink to="/user" class="container-flex" @mouseover="handleHover(2)" @mouseleave="handleLeave(2)">
-          <img src="../../static/images/profile.png"/>
-          <h1 class="home-playlist-title">Profile</h1>
-          <fa class="play-icon container-flex" icon="fa-solid fa-play" />
-        </RouterLink>
-        <RouterLink to="/playlist/projects" class="container-flex" @mouseover="handleHover(3)" @mouseleave="handleLeave(3)">
+        <RouterLink to="/playlist/projects" class="container-flex" @mouseover="handleHover(2)" @mouseleave="handleLeave(2)">
           <img src="../../static/images/projects.png"/>
           <h1 class="home-playlist-title">Projects</h1>
+          <fa class="play-icon container-flex" icon="fa-solid fa-play" />
+        </RouterLink>
+        <RouterLink to="/user" class="container-flex" @mouseover="handleHover(3)" @mouseleave="handleLeave(3)">
+          <img src="../../static/images/profile.png"/>
+          <h1 class="home-playlist-title">Profile</h1>
           <fa class="play-icon container-flex" icon="fa-solid fa-play" />
         </RouterLink>
         <a href="./liaozhu.pdf" target="_blank" class="container-flex" @mouseover="handleHover(4)" @mouseleave="handleLeave(4)">
@@ -96,8 +96,11 @@ export default {
     methods: {
       async getAuth() {
       try {
-        const response = await axios.get('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=liaozhuzhu&api_key=25edc6c4efea0c062a69a540f974de60&format=json');
-        console.log(response.data["recenttracks"]['track']);
+        const response = await axios.get('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=liaozhuzhu&api_key=25edc6c4efea0c062a69a540f974de60&format=json', {
+          headers: {
+            'Accept': 'application/json;odata=verbose',
+        }
+        });
         let track = response.data["recenttracks"]["track"];
         for (let i = 1; i < 6; i++) {
           this.recentTracks.push({
@@ -107,7 +110,6 @@ export default {
             url: track[i]['url'],
           }) 
         }
-        console.log(this.recentTracks)
       } catch (error) {
         console.error(error);
       }
@@ -213,5 +215,11 @@ export default {
 
 .profile-cards:hover #track-play-icon {
   opacity: 1;
+}
+
+@media screen and (max-width: 1040px) {
+  .home-playlist-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 }
 </style>

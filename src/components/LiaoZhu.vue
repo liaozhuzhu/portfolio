@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="container-flex justify-content-left playlist-settings">
-            <fa class="play-icon container-flex playlist-play" icon="fa-solid fa-pause" style="opacity: 1"/>
+            <fa class="play-icon container-flex playlist-play" icon="fa-solid fa-play" style="opacity: 1"/>
             <fa class="playlist-like" icon="fa-solid fa-heart" />
             <div class="container-flex justify-content-left" id="elipsis" @mouseover="togglePlaylistPopup" @mouseleave="closePlaylistPopup">
                 <fa icon="fa-solid fa-circle"/>
@@ -47,9 +47,10 @@
         </div>
         <hr class="playlist-hr"/>
         <div class="playlist-songs">
-            <div class="container-flex song-container">
+            <div class="container-flex song-container" @mouseover="handleSongHover(0)" @mouseleave="handleSongLeave(0)">
                     <div class="container-flex song-header">
                         <p class="song-index">1</p>
+                        <fa id="playlist-song-play-icon" class="playlist-song-play" icon="fa-solid fa-play"/>
                         <img src="../../static/images/home.png"/>
                         <div class="container-flex column justify-content-left song-info">
                             <RouterLink to="/" class="song-title">Home</RouterLink>
@@ -61,9 +62,10 @@
                     <RouterLink to="/" class="song-code">Open</RouterLink>
                     <p class="song-time">4:16</p>
             </div>
-            <div class="container-flex song-container">
+            <div class="container-flex song-container" @mouseover="handleSongHover(1)" @mouseleave="handleSongLeave(1)">
                     <div class="container-flex song-header">
                         <p class="song-index">2</p>
+                        <fa id="playlist-song-play-icon" class="playlist-song-play" icon="fa-solid fa-play"/>
                         <img src="../../static/images/profile.png"/>
                         <div class="container-flex column justify-content-left song-info">
                             <RouterLink to="/user" class="song-title">Profile</RouterLink>
@@ -75,9 +77,10 @@
                     <RouterLink to="/user" class="song-code">Open</RouterLink>
                     <p class="song-time">2:44</p>
             </div>
-            <div class="container-flex song-container">
+            <div class="container-flex song-container" @mouseover="handleSongHover(2)" @mouseleave="handleSongLeave(2)">
                     <div class="container-flex song-header">
                         <p class="song-index">3</p>
+                        <fa id="playlist-song-play-icon" class="playlist-song-play" icon="fa-solid fa-play"/>
                         <img src="../../static/images/projects.png"/>
                         <div class="container-flex column justify-content-left song-info">
                             <RouterLink to="/playlist/projects" class="song-title">Projects</RouterLink>
@@ -95,9 +98,10 @@
             </div>
 
             <div v-for="(section, index) in sections" :key="section.title">
-                <div class="container-flex song-container">
+                <div class="container-flex song-container" @mouseover="handleSongHover(index + 3)" @mouseleave="handleSongLeave(index + 3)">
                     <div class="container-flex song-header">
                         <p class="song-index">{{ index + 4 }}</p>
+                        <fa id="playlist-song-play-icon" class="playlist-song-play" icon="fa-solid fa-play"/>
                         <img :src="require(`../../static/images/${section.src}`)"/>
                         <div class="container-flex column justify-content-left song-info">
                             <a :href="section.code" target="_blank" class="song-title">{{ section.title }}</a>
@@ -174,6 +178,14 @@ export default {
             let playlistPopup = document.getElementById("playlist-popup");
             playlistPopup.style.opacity=0;
         },
+        handleSongHover(index) {
+            document.getElementsByClassName("playlist-song-play")[index].style.display="flex";
+            document.getElementsByClassName("song-index")[index].style.opacity="0";
+        },
+        handleSongLeave(index) {
+            document.getElementsByClassName("playlist-song-play")[index].style.display="none";
+            document.getElementsByClassName("song-index")[index].style.opacity="0.6";
+        }
     }
 }
 </script>
