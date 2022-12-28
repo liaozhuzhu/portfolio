@@ -688,9 +688,17 @@ ul {
 }
 
 /* ===== Media Queries ===== */
-@media screen and (max-width: 1000px) {
-  body {
-    background-color: blue;
+@media screen and (max-width: 1050px) {
+  /* ===== Playing ===== */
+  
+
+
+
+  .song-info {
+    width: 200px;
+  }
+  .playlist-keys div {
+    width: 270px;
   }
 }
 </style>
