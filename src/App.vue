@@ -704,6 +704,15 @@ ul {
     width: 200px !important;
     height: 200px !important;
   }
+
+  .song-page-header .playlist-category {
+    display: none;
+  }
+
+  .song-page-header h1 {
+    font-size: 4rem !important;
+    width: 400px;
+  }
 }
 
 @media screen and (max-width: 850px) {
@@ -733,6 +742,11 @@ ul {
 
   .profile-cards-container::-webkit-scrollbar { 
     display: none;  /* Safari and Chrome */
+  }
+
+  .song-page-header {
+    flex-direction: column;
+    padding: 25px;
   }
 }
 
@@ -783,14 +797,22 @@ ul {
 
   .song-info {
     max-width: 100px;
-    overflow: hidden;
-    text-decoration: none;
-    text-overflow: ellipsis;
-    white-space: nowrap;
   }
 
   .song-info a {
     font-size: 0.85rem;
+    white-space: nowrap;
+  }
+
+  .song-info div {
+    overflow: hidden;
+    text-decoration: none;
+    text-overflow: ellipsis;
+  }
+
+  .song-info div p {
+    white-space: nowrap;
+    font-size: 0.7rem;
   }
 
   /* ==== Profile ===== */
