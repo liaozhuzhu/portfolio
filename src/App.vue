@@ -388,7 +388,7 @@ ul {
   width: 230px;
   height: 230px;
   object-fit: cover;
-  filter: drop-shadow(0rem 1rem 1rem rgb(21, 21, 23));
+  filter: drop-shadow(0rem 0rem 1rem rgb(21, 21, 23));
   margin: 30px;
 }
 
@@ -862,6 +862,10 @@ ul {
   .song-page-header h1 {
     font-size: 3.5rem !important;
     width: 300px;
+  }
+
+  #recent-artist {
+    padding-left: 15px;
   }
 }
 </style>

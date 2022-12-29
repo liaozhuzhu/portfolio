@@ -59,7 +59,7 @@
         <img :src="`${ track.src }`"/>
         <div class="container-flex column justify-content-left">
           <h1>{{ track.title }}</h1>
-          <p>{{ track.artist }}</p>
+          <p id="recent-artist">{{ track.artist }}</p>
         </div>
         <fa class="play-icon container-flex" id="track-play-icon" icon="fa-solid fa-play"/>
       </a>

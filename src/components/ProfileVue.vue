@@ -249,7 +249,6 @@
   margin-left: 0px;
   margin-right: 0px;
   filter: drop-shadow(0rem 1rem 1rem rgb(21, 21, 23));
-  -webkit-appearance: none helped;
 }
 
 .profile-cards div {
