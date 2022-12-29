@@ -688,12 +688,13 @@ ul {
 }
 
 /* ===== Media Queries ===== */
-@media screen and (max-width: 1050px) {
-
+@media screen and (max-width: 1200px) {
   #recent-artist {
     padding-left: 20px;
   }
-  
+}
+@media screen and (max-width: 1050px) {
+
   .song-info {
     width: 200px;
   }
