@@ -20,6 +20,8 @@ import Collins from "@/pages/CollinsVue.vue";
 import Acm from "@/pages/AcmVue.vue";
 import Robotics from "@/pages/RoboticsVue.vue";
 
+import Search from "@/components/Search.vue";
+
 const routes = [
 	{
 		path: "/",
@@ -100,6 +102,10 @@ const routes = [
 	{
 		path: "/playlist/robotics",
 		component: Robotics
+	},
+	{
+		path: "/search",
+		component: Search
 	}
 ]
 
