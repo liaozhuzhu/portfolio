@@ -23,7 +23,7 @@
       <img src="../../static/images/pfp.jpeg"/>
       <div class="container-block">
         <p>PROFILE</p>
-        <h1 class="section-title">liaozhuu</h1>
+        <h1 class="section-title profile-title">liaozhuu</h1>
       </div>
     </div>
     <div class="container-block justify-content-left" id="profile-body">
@@ -164,6 +164,7 @@
 #profile-header h1 {
   font-size: 6rem;
   letter-spacing: -4px;
+  margin: 0;
 }
 
 #profile-body div {

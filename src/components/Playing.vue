@@ -28,6 +28,11 @@
         <div class="currently-playing" v-if="isPlaying">
             <p><fa icon="fa-solid fa-volume-high" /> Listening live on Liao's Headphones</p>
         </div>
+        <div class="navbar-mobile container-flex" style="display: none">
+            <RouterLink to="/"><fa icon="fa-solid fa-home"></fa></RouterLink>
+            <RouterLink to="/user"><fa icon="fa-solid fa-magnifying-glass"></fa></RouterLink>
+            <RouterLink to="/playlist/projects"><fa icon="fa-solid fa-bars"></fa></RouterLink>
+        </div>
     </div>
 </template>
 <script>
@@ -234,5 +239,61 @@ a {
     font-weight: 500;
     padding: 5px;
     padding-inline-end: 50px;
+}
+
+.navbar-mobile {
+    justify-content: space-around;
+    background-color: black;
+    padding-block: 10px;
+}
+
+.navbar-mobile a {
+    opacity: 0.6;
+}
+
+/* ===== Media Queries ===== */
+@media screen and (max-width: 750px) {
+  .playing-footer {
+    display: none;
+  }
+
+  .select-icon {
+    display: none;
+  }
+
+  .fa-shuffle {
+    display: none;
+  }
+
+  .fa-repeat {
+    display: none;
+  }
+
+  .fa-pause {
+    color: white;
+    background-color: inherit;
+    width: 25px;
+    height: 25px;
+  }
+
+  .fa-play {
+    color: white;
+    background-color: inherit;
+    width: 25px;
+    height: 25px;
+  }
+
+  .playing-header {
+    max-height: 30px;
+  }
+}
+@media screen and (max-width: 1000px) {
+    .playing-header h1{
+    max-width: 200px;
+    overflow: hidden;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }
 </style>

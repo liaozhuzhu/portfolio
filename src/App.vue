@@ -689,16 +689,135 @@ ul {
 
 /* ===== Media Queries ===== */
 @media screen and (max-width: 1050px) {
-  /* ===== Playing ===== */
-  
-
-
-
   .song-info {
     width: 200px;
   }
   .playlist-keys div {
     width: 270px;
+  }
+  #profile-header h1 {
+    font-size: 4rem !important;
+    letter-spacing: 0px !important;
+  }
+
+  #profile-header img {
+    width: 200px !important;
+    height: 200px !important;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .navbar {
+    display: none;
+  }
+
+  .navbar-mobile {
+    display: flex !important;
+  }
+
+  .currently-playing {
+    display: none;
+  }
+
+  .section {
+    width: 100%;
+    margin: 0;
+  }
+
+  .profile-cards-container {
+    display: flex !important;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .profile-cards-container::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .playlist-header {
+    flex-direction: column !important;
+  }
+
+  .playlist-title {
+    font-size: 5rem;
+  }
+
+  .playlist-desc {
+    display: none;
+  }
+
+  .playlist-category {
+    display: none;
+  }
+
+  .song-time {
+    display: none;
+  }
+
+  .playlist-keys {
+    display: none;
+  }
+
+  .playlist-hr {
+    display: none;
+  }
+
+  .song-index {
+    display: none;
+  }
+  
+  .playlist-song-play {
+    display: none !important;
+  }
+
+  .song-container {
+    margin: 0 !important;
+  }
+
+  .song-header {
+    max-width: 50%;
+  }
+
+  .song-info {
+    max-width: 100px;
+    overflow: hidden;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .song-info a {
+    font-size: 0.85rem;
+  }
+
+  /* ==== Profile ===== */
+
+  .profile-cards-container {
+    overflow: scroll;
+  }
+
+  #profile-header p {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #profile-header img {
+    width: 100px !important;
+    height: 100px !important;
+    border-radius: 0px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+    margin-right: 0px !important;
+  }
+
+  #profile-header h1 {
+    font-size: 1.5rem !important; 
+    letter-spacing: 0px !important;
+    margin: 25px !important;
   }
 }
 </style>

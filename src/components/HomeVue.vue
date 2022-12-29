@@ -220,6 +220,7 @@ export default {
 @media screen and (max-width: 1040px) {
   .home-playlist-container {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding-right: 25px;
   }
 }
 </style>

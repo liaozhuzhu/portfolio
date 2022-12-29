@@ -50,7 +50,7 @@
             <div class="container-flex song-container" @mouseover="handleSongHover(0)" @mouseleave="handleSongLeave(0)">
                     <div class="container-flex song-header">
                         <p class="song-index">1</p>
-                        <fa id="playlist-song-play-icon" class="playlist-song-play" icon="fa-solid fa-play"/>
+                        <RouterLink to="/" style="cursor: default"><fa id="playlist-song-play-icon" class="playlist-song-play" icon="fa-solid fa-play"/></RouterLink>
                         <img src="../../static/images/home.png"/>
                         <div class="container-flex column justify-content-left song-info">
                             <RouterLink to="/" class="song-title">Home</RouterLink>
@@ -65,7 +65,7 @@
             <div class="container-flex song-container" @mouseover="handleSongHover(1)" @mouseleave="handleSongLeave(1)">
                     <div class="container-flex song-header">
                         <p class="song-index">2</p>
-                        <fa id="playlist-song-play-icon" class="playlist-song-play" icon="fa-solid fa-play"/>
+                        <RouterLink to="/user" style="cursor: default"><fa id="playlist-song-play-icon" class="playlist-song-play" icon="fa-solid fa-play"/></RouterLink>
                         <img src="../../static/images/profile.png"/>
                         <div class="container-flex column justify-content-left song-info">
                             <RouterLink to="/user" class="song-title">Profile</RouterLink>
@@ -80,7 +80,7 @@
             <div class="container-flex song-container" @mouseover="handleSongHover(2)" @mouseleave="handleSongLeave(2)">
                     <div class="container-flex song-header">
                         <p class="song-index">3</p>
-                        <fa id="playlist-song-play-icon" class="playlist-song-play" icon="fa-solid fa-play"/>
+                        <RouterLink to="/playlist/projects" style="cursor: default"><fa id="playlist-song-play-icon" class="playlist-song-play" icon="fa-solid fa-play"/></RouterLink>
                         <img src="../../static/images/projects.png"/>
                         <div class="container-flex column justify-content-left song-info">
                             <RouterLink to="/playlist/projects" class="song-title">Projects</RouterLink>
@@ -101,7 +101,7 @@
                 <div class="container-flex song-container" @mouseover="handleSongHover(index + 3)" @mouseleave="handleSongLeave(index + 3)">
                     <div class="container-flex song-header">
                         <p class="song-index">{{ index + 4 }}</p>
-                        <fa id="playlist-song-play-icon" class="playlist-song-play" icon="fa-solid fa-play"/>
+                        <a :href="section.code" target="_blank" style="cursor: default"><fa id="playlist-song-play-icon" class="playlist-song-play" icon="fa-solid fa-play"/></a>
                         <img :src="require(`../../static/images/${section.src}`)"/>
                         <div class="container-flex column justify-content-left song-info">
                             <a :href="section.code" target="_blank" class="song-title">{{ section.title }}</a>

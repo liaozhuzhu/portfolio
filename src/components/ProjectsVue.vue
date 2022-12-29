@@ -51,10 +51,10 @@
                 <div class="container-flex song-container" @mouseover="handleSongHover(projIndex)" @mouseleave="handleSongLeave(projIndex)">
                     <div class="container-flex song-header">
                         <p id="song-index-id" class="song-index">{{ projIndex + 1 }} </p>
-                        <fa id="playlist-song-play-icon" class="playlist-song-play" icon="fa-solid fa-play"/>
+                        <RouterLink :to="project.page" style="cursor: default"><fa id="playlist-song-play-icon" class="playlist-song-play" icon="fa-solid fa-play"/></RouterLink>
                         <img :src="require(`../../static/images/${project.src}`)"/>
                         <div class="container-flex column justify-content-left song-info">
-                            <RouterLink :to="project.page" class="song-title">{{ project.title }}</RouterLink>
+                            <RouterLink :to="project.page" class="song-title" id="project-title-link">{{ project.title }}</RouterLink>
                             <div class="container-flex">
                                 <p v-for="(language, index) in project.languages" :key="language" class="song-languages">{{ language[0] }}<span v-if="index != project.languages.length - 1">, </span></p>
                             </div>
