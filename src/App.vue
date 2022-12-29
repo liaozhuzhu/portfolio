@@ -689,6 +689,11 @@ ul {
 
 /* ===== Media Queries ===== */
 @media screen and (max-width: 1050px) {
+
+  #recent-artist {
+    padding-left: 20px;
+  }
+  
   .song-info {
     width: 200px;
   }
@@ -862,10 +867,6 @@ ul {
   .song-page-header h1 {
     font-size: 3.5rem !important;
     width: 300px;
-  }
-
-  #recent-artist {
-    padding-left: 20px;
   }
 }
 </style>
