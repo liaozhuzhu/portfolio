@@ -290,4 +290,10 @@
 .ec-desc {
   margin-bottom: 35px !important;
 }
+
+@media screen and (max-width: 850px) {
+  #about-popup {
+    left: 0px;
+  }
+}
 </style>

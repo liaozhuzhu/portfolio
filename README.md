@@ -2,8 +2,8 @@
 
 **Temp** deployment: https://liaozhu.netlify.app/
 
-- Responsiveness (working on it)
-    - figure out why artist on recent tracks left aligns on mobile
+- Responsiveness
+    1. figure out weird mobile recent track artist left align issue
 - Work on Topbar component implementation with each page
 - Minor details sidebar
     - Change search, your library, create playlist, and liked songs functionality???
