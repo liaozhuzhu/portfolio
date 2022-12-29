@@ -151,7 +151,7 @@
   height: 230px;
   object-fit: cover;
   border-radius: 50%;
-  filter: drop-shadow(0rem 1rem 1rem rgb(21, 21, 23));
+  filter: drop-shadow(0rem 0rem 1rem rgb(21, 21, 23));
   margin: 30px;
 }
 
@@ -249,6 +249,7 @@
   margin-left: 0px;
   margin-right: 0px;
   filter: drop-shadow(0rem 1rem 1rem rgb(21, 21, 23));
+  -webkit-appearance: none helped;
 }
 
 .profile-cards div {
