@@ -37,11 +37,12 @@
             </div>
         </div>
         <div class="container-flex justify-content-left song-desc">
-            <p>As you know, I love Spotify. Another app I love is Discord. My friends and I used these apps so much during Covid. We would always wait for new releases, or show each other random songs,
-                or even our own stats. One issue though is that we would have to go to the actual Spotify app and get these pieces of information.
+            <p>As you know, I love Spotify. Another app I love is Discord. My friends and I used these apps so much during Covid, always showing each other random Spotify songs,
+                or even our own stats trough Discord. One issue though is that we would have to go to the actual Spotify app and get these pieces of information and then paste them into the Discord channel.
             <br/>
             <br/>
-            I was inspired to try to combine these actions into one. Using Discord's API and <a href="https://spotipy.readthedocs.io/en/2.22.0/" target="_blank">Spotipy</a>, I made Statipy - a Discord bot that allowed users to show off their own Spotify profiles, stats, songs, playlists, and artists.
+            I was inspired to try to combine these actions into one. Using Discord's API and <a href="https://spotipy.readthedocs.io/en/2.22.0/" target="_blank">Spotipy</a>, I made Statipy - a Discord bot that allowed users to show off their own Spotify profiles, stats, songs, playlists, and artists, all
+            without leaving Discord!
             <br/>
             <br/>
             To try it yourself, go to <a target="_blank" href="https://discord.com/oauth2/authorize?client_id=1021833387205472307&permissions=535798742080&scope=bot">this url</a> and add it to your server (It's probably offline though as I'm not running it through a server). 

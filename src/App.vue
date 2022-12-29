@@ -748,6 +748,10 @@ ul {
     flex-direction: column;
     padding: 25px;
   }
+
+  .artist-header {
+    background-attachment: scroll !important;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -757,6 +761,7 @@ ul {
 
   .playlist-title {
     font-size: 5rem;
+    width: 330px;
   }
 
   .playlist-desc {
@@ -813,6 +818,10 @@ ul {
   .song-info div p {
     white-space: nowrap;
     font-size: 0.7rem;
+  }
+
+  .artist-title {
+    font-size: 4rem !important;
   }
 
   /* ==== Profile ===== */
