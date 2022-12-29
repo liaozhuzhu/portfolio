@@ -35,7 +35,7 @@
       </div>
       <div class="container-flex justify-content-left" id="profile-about">
         <p>My name is Liao Zhu. I am pursuing a Computer Science degree at the University of Iowa. Currently, I am a web intern for the College of Engineering
-          and am an incoming software engineer at <a href="https://www.collinsaerospace.com/" target="_blank">Collins Aerospace</a>.
+          and am an incoming software engineering intern at <a href="https://www.collinsaerospace.com/" target="_blank">Collins Aerospace</a>.
           <br/>
           <br/>
           Some of my most proficient skills include Java, Python, and JavaScript. I have experience with Vue, React, Node, and SQL but have much more to learn!
