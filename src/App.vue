@@ -841,5 +841,10 @@ ul {
     letter-spacing: 0px !important;
     margin: 25px !important;
   }
+
+  .song-page-header h1 {
+    font-size: 3.5rem !important;
+    width: 300px;
+  }
 }
 </style>
