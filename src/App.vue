@@ -865,7 +865,7 @@ ul {
   }
 
   #recent-artist {
-    padding-left: 15px;
+    padding-left: 20px;
   }
 }
 </style>
