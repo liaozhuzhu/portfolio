@@ -58,7 +58,6 @@ export default {
             try {
                 const response = await axios.get('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=liaozhuzhu&api_key=25edc6c4efea0c062a69a540f974de60&format=json');
                 let track = response.data["recenttracks"]["track"];
-                console.log(track);
                 if ("@attr" in track[0]) {
                     this.title = track[0]['name'];
                     this.artist = track[0]['artist']['#text'];

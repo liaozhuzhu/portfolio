@@ -796,9 +796,9 @@ ul {
     margin: 0 !important;
   }
 
-  .song-header {
+  /* .song-header {
     max-width: 50%;
-  }
+  } */
 
   .song-info {
     max-width: 100px;
@@ -810,9 +810,17 @@ ul {
   }
 
   .song-info div {
-    overflow: hidden;
+    overflow: scroll;
     text-decoration: none;
     text-overflow: ellipsis;
+    justify-content: left;
+    width: 200px;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .song-info div::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
   }
 
   .song-info div p {
