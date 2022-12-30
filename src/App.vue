@@ -847,6 +847,20 @@ ul {
   #profile-header p {
     display: none;
   }
+
+  /* ==== Search ===== */
+  .search-account-dropdown {
+    display: none;
+  }
+
+  .search-input-container {
+    margin-left: auto !important;
+    font-size: 1rem !important;
+  }
+
+  .search-card {
+    font-size: 1rem !important;
+  }
 }
 
 @media screen and (max-width: 500px) {

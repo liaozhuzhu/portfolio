@@ -3,7 +3,7 @@
         <RouterLink to="/" class="container-flex justify-content-left" id="home-logo"><img src="../../static/images/sig.png"/> <h1 class="container-flex">Liao Zhu<p style="font-size: 0.3rem">®</p></h1></RouterLink>
         <ul class="navbar-list">
             <RouterLink to="/" class="container-flex justify-content-left active"><fa class="sidebar-icon" icon="fa-solid fa-home"/> <p class="sidebar-link">Home</p></RouterLink>
-            <RouterLink to="/user" class="container-flex justify-content-left"><fa class="sidebar-icon" icon="fa-solid fa-magnifying-glass"/> <p class="sidebar-link">Search</p></RouterLink>            
+            <RouterLink to="/search" class="container-flex justify-content-left"><fa class="sidebar-icon" icon="fa-solid fa-magnifying-glass"/> <p class="sidebar-link">Search</p></RouterLink>            
             <RouterLink to="/playlist/projects" class="container-flex justify-content-left"><fa class="sidebar-icon" icon="fa-solid fa-bars" /> <p class="sidebar-link">Your Library</p></RouterLink>
             <br/>
             <br/>   
