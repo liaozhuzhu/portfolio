@@ -44,6 +44,9 @@
           <br/>
           When I'm not watching anime, or playing with my younger brother, I'm coding and listening to music (thus why this site is inspired by <a href="https://open.spotify.com/" target="_blank">Spotify</a>).
           By the way, the currently playing song bar below is 100% accurate (from details, to pausing and playing, etc.) and live updates on its own. This way everyone can see what type of music I enjoy throughout my day!
+          <br/>
+          <br/>
+          Thank you to <a href="https://www.linkedin.com/in/lily-dosedel/" target="_blank">Lily Dosedel</a> for making the Panda Logo Design.
         </p>
       </div>
     </div>
