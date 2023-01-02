@@ -23,6 +23,19 @@
             </ul>
         </div>
         <h1 v-if="searchText.length > 0" class="section-title" id="search-section-title">Results</h1>
+        <div class="search-card-container" v-else >
+            <h1 class="section-title" id="search-all-title">All pages</h1>
+            <div v-for="page in allPages" :key="page.url">
+                <p>
+                    <a v-if="'target' in page" target="_blank" :href="page.url" class="search-card">
+                        {{ page.title }}
+                    </a>
+                    <RouterLink v-else :to="page.url" class="search-card">
+                            {{page.title}}
+                    </RouterLink>
+                </p>
+            </div>
+        </div>
         <div class="search-card-container">
             <div v-for="page in pages" :key="page.href">
                 <p v-if="page.pageTitle.includes(searchText.replace(/\s/g, '')) && searchText != ''">
@@ -47,8 +60,109 @@ export default {
     data() {
         return {
             searchText: "",
-            pages: searchPages
+            pages: searchPages,
+            allPages: [
+                {
+                    title: "Home",
+                    url: "/"
+                },
+                {
+                    title: "Profile",
+                    url: "/user"
+                },
+                {
+                    title: "Projects",
+                    url: "/playlist/projects"
+                },
+                {
+                    title: "Liao Zhu",
+                    url: "/playlist/liao-zhu"
+                },
+                {
+                    title: "Portfolio",
+                    url: "/track/my-portfolio"
+                },
+                {
+                    title: "Tiktok Video Generator Bot",
+                    url: "/track/tiktok-video-generator"
+                },
+                {
+                    title: "QiT",
+                    url: "/track/qit"
+                },
+                {
+                    title: "Statipy",
+                    url: "/track/statipy"
+                },
+                {
+                    title: "UIowa Course Search Clone",
+                    url: "/track/uiowa-course-search-clone"
+                },
+                {
+                    title: "Clask",
+                    url: "/track/clask"
+                },
+                {
+                    title: "Sorting Visualizer",
+                    url: "/track/sorting-visualizer"
+                },
+                {
+                    title: "Mathnasium Instructor",
+                    url: "/experience/mathnasium-instructor"
+                },
+                {
+                    title: "UIowa Web Intern",
+                    url: "/experience/uiowa-web-intern"
+                },
+                {
+                    title: "Incoming Collins SWE Intern",
+                    url: "/experience/collins-software-engineer-intern"
+                },
+                {
+                    title: "ACM",
+                    url: "/playlist/acm"
+                },
+                {
+                    title: "Robotics",
+                    url: "/playlist/robotics"
+                },
+                {
+                    title: "Resume",
+                    url: "../liaozhu.pdf",
+                    target: "blank"
+                },
+                {
+                    title: "Github",
+                    url: "https://github.com/liaozhuzhu",
+                    target: "blank"
+                },
+                {
+                    title: "Linkedin",
+                    url: "https://www.linkedin.com/in/liao-zhu/",
+                    target: "blank"
+                },
+                {
+                    title: "Email",
+                    url: "mailto:liao.zhu.cs@gmail.com",
+                    target: "blank"
+                }
+
+            ]
         }
+    },
+    methods: {
+        toggleAccountDropdown() {
+        this.accountIsShowing = !this.accountIsShowing;
+        if (this.accountIsShowing) {
+          document.getElementById("caret-up").style.display="flex";
+          document.getElementById("caret-down").style.display="none";
+          document.getElementById("account-dropdown-container").style.display="flex";
+        } else {
+          document.getElementById("caret-up").style.display="none";
+          document.getElementById("caret-down").style.display="flex";
+          document.getElementById("account-dropdown-container").style.display="none";
+        }
+      },
     }
 }
 </script>
@@ -65,6 +179,12 @@ export default {
 
 #search-section-title {
     font-size: 3rem;
+}
+
+#search-all-title {
+    font-size: 3rem;
+    margin-left: 0px;
+    margin-top: 0px;
 }
 
 .search-input-container {
@@ -88,10 +208,6 @@ export default {
     border-radius: 0px 16px 16px 0px;
     line-height: 10px;
 }
-    
-.search-card {
-    color: white;
-}
 
 .search-card-container {
     margin: 25px;
@@ -104,10 +220,10 @@ export default {
     align-items: center;
     justify-content: left;
     font-size: 1.5rem;
-    margin-block: 25px;
-    padding-block: 10px;
+    padding-block: 25px;
     border-radius: 6px;
     padding-left: 5px;
+    color: white;
 }
 
 .search-card:hover {

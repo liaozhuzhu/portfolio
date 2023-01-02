@@ -150,7 +150,8 @@ export const searchPages = [
         href: [
             {
                 url: "mailto:liao.zhu.cs@gmail.com",
-                title: "Email"
+                title: "Email",
+                target: "blank"
             }
         ]
     },
@@ -177,7 +178,7 @@ export const searchPages = [
         href: [
             {
                 url: "/track/my-portfolio",
-                title: "My Portfolio"
+                title: "Portfolio"
             }
         ]
     },
