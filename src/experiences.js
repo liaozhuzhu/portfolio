@@ -1,9 +1,9 @@
 export const experiences = [
   {
-    title: "Math Instructor",
-    artist: "Mathnasium",
-    src: "mathnasium.png",
-    href: "/experience/mathnasium-instructor",
+    title: "Incoming SWE Intern",
+    artist: "Collins Aerospace",
+    src: "collins.png",
+    href: "/experience/collins-software-engineer-intern",
   },
   {
     title: "Web Intern",
@@ -12,9 +12,9 @@ export const experiences = [
     href: "/experience/uiowa-web-intern",
   },
   {
-    title: "Incoming SWE Intern",
-    artist: "Collins Aerospace",
-    src: "collins.png",
-    href: "/experience/collins-software-engineer-intern",
+    title: "Math Instructor",
+    artist: "Mathnasium",
+    src: "mathnasium.png",
+    href: "/experience/mathnasium-instructor",
   },
 ]
