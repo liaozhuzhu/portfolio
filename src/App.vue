@@ -846,7 +846,7 @@ ul {
 
   #profile-header p {
     display: none;
-  }
+  } 
 
   /* ==== Search ===== */
   .search-account-dropdown {
