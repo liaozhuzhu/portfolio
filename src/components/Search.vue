@@ -36,7 +36,7 @@
             </div>
         </div>
         <div class="search-card-container" v-else>
-            <h1 class="section-title" id="search-all-title">Results</h1>
+            <h1 class="section-title" id="search-all-title">Test</h1>
             <div v-for="page in pages" :key="page.href">
                 <p v-if="page.pageTitle.includes(searchText.replace(/\s/g, '')) && searchText != ''">
                     <a v-if="'target' in page.href[0]" target="_blank" :href="page.href[0].url" class="search-card">
