@@ -858,6 +858,10 @@ ul {
     font-size: 1rem !important;
   }
 
+  .search-input {
+    font-size: 16px;
+  }
+
   .search-card {
     font-size: 1rem !important;
   }
