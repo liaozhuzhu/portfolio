@@ -38,15 +38,7 @@
         <div class="search-card-container" v-else>
             <h1 id="search-section-title">Results</h1>
             <div v-for="page in pages" :key="page.href">
-                <p v-if="page.pageTitle.includes(searchText.replace(/\s/g, '')) && searchText != ''">
-                    <a v-if="'target' in page.href[0]" target="_blank" :href="page.href[0].url" class="search-card">
-                        {{ page.href[0].title }}
-                    </a>
-                    <RouterLink v-else :to="key.url" v-for="key in page.href" :key="key.url" class="search-card">
-                            {{key.title}}
-                    </RouterLink>
-                </p>
-                <p v-else>
+                <p v-if="page.pageTitle.includes(searchText.replace( /\s/g, '').toLowerCase())">
                     <a v-if="'target' in page.href[0]" target="_blank" :href="page.href[0].url" class="search-card">
                         {{ page.href[0].title }}
                     </a>
