@@ -1,5 +1,7 @@
-# 🚧 WORK IN PROGRESS 🚧
+# My Spotify Parody Portfolio
 
-**Temp** deployment: https://liaozhu.netlify.app/
+I wanted to make my portfolio stand out amongst the crowd, and at the same time, get more practice using Vue.
 
-1. Figure out why search doesn't work on mobile
+This portfolio displays information to get to know me better, as well as songs and current song I am listening to!
+
+Check it out here [liaozhu.dev](https://liaozhu.dev)
