@@ -4,7 +4,7 @@
         <div class="playing-header">
             <img :src="`${ src }`"/>
             <div class="container-flex column">
-                <a target="_blank" href="url"><h1>{{title}}</h1></a>
+                <a target="_blank" :href="url"><h1>{{title}}</h1></a>
                 <p>{{ artist }}</p>
             </div>
             <fa icon="fa-regular fa-heart"></fa>
