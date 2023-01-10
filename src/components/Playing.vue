@@ -5,7 +5,7 @@
             <img :src="`${ src }`"/>
             <div class="container-flex column">
                 <a target="_blank" :href="url"><h1>{{title}}</h1></a>
-                <p>{{ artist }}</p>
+                <p><a target="_blank" :href="'https://www.last.fm/music/' + artist">{{ artist }}</a></p>
             </div>
             <fa icon="fa-regular fa-heart"></fa>
         </div>
