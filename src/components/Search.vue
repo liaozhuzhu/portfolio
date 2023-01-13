@@ -115,6 +115,10 @@ export default {
                     url: "/experience/uiowa-web-intern"
                 },
                 {
+                    title: "AIS SWE Intern",
+                    url: "/experience/its-ais-swe-intern"
+                },
+                {
                     title: "Incoming Collins SWE Intern",
                     url: "/experience/collins-software-engineer-intern"
                 },
