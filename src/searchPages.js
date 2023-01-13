@@ -232,7 +232,11 @@ export const searchPages = [
             {
                 url: "/experience/collins-software-engineer-intern",
                 title: "Incoming Collins SWE Intern"
-            }
+            },
+            {
+                url: "/experience/its-ais-swe-intern",
+                title: "AIS SWE Intern"
+            },
         ]
     },
     {
@@ -250,6 +254,15 @@ export const searchPages = [
             {
                 url: "/experience/uiowa-web-intern",
                 title: "UIowa Web Intern"
+            }
+        ]
+    },
+    {
+        pageTitle: "uiowaitsaissoftwareengineerintern",
+        href: [
+            {
+                url: "/experience/its-ais-swe-intern",
+                title: "AIS SWE Intern"
             }
         ]
     },

@@ -15,6 +15,7 @@ import Statipy from "@/pages/StatipyVue.vue";
 
 import Mathnasium from "@/pages/MathnasiumInstructor.vue";
 import UIowaWebIntern from "@/pages/UIowaWebIntern.vue";
+import ITSIntern from "@/pages/ITSIntern.vue";
 import Collins from "@/pages/CollinsVue.vue";
 
 import Acm from "@/pages/AcmVue.vue";
@@ -89,6 +90,10 @@ const routes = [
 	{
 		path: "/experience/uiowa-web-intern",
 		component: UIowaWebIntern,
+	},
+	{
+		path: "/experience/its-ais-swe-intern",
+		component: ITSIntern,
 	},
 	{
 		path: "/experience/collins-software-engineer-intern",

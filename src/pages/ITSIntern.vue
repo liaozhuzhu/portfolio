@@ -24,8 +24,8 @@
                     <fa icon="fa-solid fa-square-check"/>
                     <p style="">Verified Artist</p>
                 </div>
-                <h1 class="artist-title">UIowa Web Intern</h1>
-                <p class="artist-listeners">2,200 monthly listeners</p>
+                <h1 class="artist-title">AIS SWE Intern</h1>
+                <p class="artist-listeners">33,000 monthly listeners</p>
             </div>
         </div>
         <div class="container-flex justify-content-left playlist-settings">
@@ -39,23 +39,13 @@
             </div>
         </div>
         <div class="container-flex justify-content-left song-desc">
-            <p>Starting since June 2022, I've been working as a web intern for UIowa's College of Engineering. 
+            <p>Recently, I've started as a Software Engineering Intern for my school's <a href="https://its.uiowa.edu/about/ais#:~:text=Administrative%20Information%20Systems%20(AIS)%20provides,identity%2C%20and%20data%20analytics%20solutions." target="_blank">ITS - Administrative System Information department</a>.
             <br/>
             <br/>
-            Ever since, I've worked on several projects, accumulating over 50+ pages and 3 complete sites for the school. Another part of the job
-            is handling faculty ticket requests to update and handle new pages.
+            For this position, I put my Java and JavaScript skills to the test. Hopefully I will be able to learn how to integrate my code with AWS features.
             <br/>
             <br/>
-            For this internship, I use Drupal and the school's site builder - <a href="https://sitenow.uiowa.edu/" target="_blank">SiteNow</a>.
-            <br/>
-            <br/>
-            To be completely honest, I find the lack of code unappealing. However, handling requests from faculty, and collaborating with the school to create pages is very
-            fulfilling for the position.
-            <br/>
-            <br/>
-            Starting Spring 2022, I will begin another position as a Software Web Developer for the school's <a href="https://its.uiowa.edu/" target="_blank">ITS</a> Administrative Information Systems department.
-            For this position, I will use JavaScript and Java (and maybe AWS) which I am very excited for because I get to test my skills, and because
-            I get to code ( ๑‾̀◡‾́)(‾̀◡‾́ ๑).
+            Not much to be said for this position as I am just starting, but stay tuned for constant updates as I get more experience with this position!
             </p>
       </div>
     </div>
@@ -63,7 +53,7 @@
 <script>
 export default {
     created() {
-        document.title = "Liao Zhu - UIowa COE Web Intern"
+        document.title = "Liao Zhu - ITS Administrative Information Systems Software Engineering Intern"
     },
     methods: {
         togglePlaylistPopup() {
@@ -96,6 +86,6 @@ export default {
     }
 
     .artist-header {
-        background-image: url("../../static/images/iowabanner.png");
+        background-image: url("../../static/images/itsbanner.png");
     }
 </style>
