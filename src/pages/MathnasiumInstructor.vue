@@ -39,7 +39,7 @@
             </div>
         </div>
         <div class="container-flex justify-content-left song-desc">
-            <p>I worked at Mathnasium starting October 2021 to August 2022. Prior to being an instructor, I was a soccer referee. Though refereeing allowed me to gain so many valuable skills such as leadership, 
+            <p>I worked at <a href="https://www.mathnasium.com/" target="_blank">Mathnasium</a> starting October 2021 to August 2022. Prior to being an instructor, I was a soccer referee. Though refereeing allowed me to gain so many valuable skills such as leadership, 
                 teamwork, and critical-fast thinking, it was much more stressful compared to being an instructor at Mathnasium.
             <br/>
             <br/>

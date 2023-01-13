@@ -29,7 +29,7 @@
             </div>
         </div>
         <div class="container-flex justify-content-left playlist-settings">
-            <a target="_blank" href="https://engineering.uiowa.edu/"><fa class="play-icon container-flex playlist-play" icon="fa-solid fa-play" style="opacity: 1"/></a>
+            <a target="_blank" href="https://its.uiowa.edu/about/ais"><fa class="play-icon container-flex playlist-play" icon="fa-solid fa-play" style="opacity: 1"/></a>
             <div class="artist-follow">FOLLOW</div>
             <div class="container-flex justify-content-left" id="elipsis" @mouseover="togglePlaylistPopup" @mouseleave="closePlaylistPopup">
                 <fa icon="fa-solid fa-circle"/>
@@ -39,7 +39,7 @@
             </div>
         </div>
         <div class="container-flex justify-content-left song-desc">
-            <p>Recently, I've started as a Software Engineering Intern for my school's <a href="https://its.uiowa.edu/about/ais#:~:text=Administrative%20Information%20Systems%20(AIS)%20provides,identity%2C%20and%20data%20analytics%20solutions." target="_blank">ITS - Administrative System Information department</a>.
+            <p>Recently, I've started as a Software Engineering Intern for my school's <a href="https://its.uiowa.edu/about/ais" target="_blank">ITS - Administrative System Information department</a>.
             <br/>
             <br/>
             For this position, I put my Java and JavaScript skills to the test. Hopefully I will be able to learn how to integrate my code with AWS features.
