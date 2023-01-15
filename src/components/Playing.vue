@@ -26,7 +26,7 @@
         </div>
         </div>
         <div class="currently-playing" v-if="isPlaying">
-            <p><fa icon="fa-solid fa-volume-high" /> Listening live on Liao's Headphones</p>
+            <p><fa icon="fa-solid fa-volume-high" /> Listening live</p>
         </div>
         <div class="navbar-mobile container-flex" style="display: none">
             <RouterLink to="/"><fa icon="fa-solid fa-home"></fa></RouterLink>
