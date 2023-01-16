@@ -53,7 +53,7 @@
             fulfilling for the position.
             <br/>
             <br/>
-            Starting Spring 2022, I will begin another position as a Software Web Developer for the school's <a href="https://its.uiowa.edu/" target="_blank">ITS</a> Administrative Information Systems department.
+            Starting Spring 2022, I will begin another position as a Software Engineer for the school's <a href="https://its.uiowa.edu/" target="_blank">ITS</a> Administrative Information Systems department.
             For this position, I will use JavaScript and Java (and maybe AWS) which I am very excited for because I get to test my skills, and because
             I get to code ( ๑‾̀◡‾́)(‾̀◡‾́ ๑).
             </p>
