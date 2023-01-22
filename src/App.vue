@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Playing/>
+    <Playing v-if="!$route.meta.hideNav"/>
     <Navbar v-if="!$route.meta.hideNav"/>
     <!-- <Topbar/> -->
     <router-view />
@@ -16,15 +16,6 @@ export default {
     Navbar, 
     Playing
   },
-  data() {
-    return {
-    }
-  },
-  methods: {
-  },
-  created() {
-    console.log(this.$route.meta.hideNav);
-  }
 }
 </script>
 
@@ -34,6 +25,10 @@ export default {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --pink: #db5aba;
 }
 
 a {

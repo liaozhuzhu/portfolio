@@ -23,6 +23,8 @@ import Robotics from "@/pages/RoboticsVue.vue";
 
 import Search from "@/components/Search.vue";
 
+import Lily from "@/pages/LilyVue.vue"
+
 const routes = [
 	{
 		path: "/",
@@ -111,6 +113,14 @@ const routes = [
 	{
 		path: "/search",
 		component: Search
+	},
+	/* ===== Extra ====== */
+	{
+		path: "/for-lily",
+		component: Lily,
+		meta: {
+			hideNav: true,
+		}
 	}
 ]
 
