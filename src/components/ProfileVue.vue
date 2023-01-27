@@ -34,7 +34,7 @@
         <p id="about-popup">{{aboutShowingText}}</p>
       </div>
       <div class="container-flex justify-content-left" id="profile-about">
-        <p>My name is Liao Zhu. I am pursuing a Computer Science degree at the University of Iowa. Currently, I am a web intern for the College of Engineering
+        <p>My name is Liao Zhu. I am pursuing a Computer Science degree at the University of Iowa. Currently, I am a SWE intern for the University of Iowa's ITS <a href="https://its.uiowa.edu/about/ais" target="_blank">Administrative Information Systems</a>, 
           and am an incoming software engineering intern at <a href="https://www.collinsaerospace.com/" target="_blank">Collins Aerospace</a>.
           <br/>
           <br/>

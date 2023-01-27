@@ -7,7 +7,7 @@ export const extracurriculars = [
     },
     {
         title: "Robotics at Iowa",
-        artist: "Software Dev",
+        artist: "Software Engineer",
         src: "robotics.png",
         href: "/playlist/robotics"
     },

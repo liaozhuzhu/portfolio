@@ -4,7 +4,7 @@
         <ul class="navbar-list">
             <RouterLink to="/" class="container-flex justify-content-left active"><fa class="sidebar-icon" icon="fa-solid fa-home"/> <p class="sidebar-link">Home</p></RouterLink>
             <RouterLink to="/search" class="container-flex justify-content-left"><fa class="sidebar-icon" icon="fa-solid fa-magnifying-glass"/> <p class="sidebar-link">Search</p></RouterLink>            
-            <RouterLink to="/playlist/projects" class="container-flex justify-content-left"><fa class="sidebar-icon" icon="fa-solid fa-bars" /> <p class="sidebar-link">Your Library</p></RouterLink>
+            <RouterLink to="/playlist/content" class="container-flex justify-content-left"><fa class="sidebar-icon" icon="fa-solid fa-bars" /> <p class="sidebar-link">Your Library</p></RouterLink>
             <br/>
             <br/>   
             <div class="navbar-inner">
@@ -16,7 +16,7 @@
         <div class="horizontal-line"></div>
         <br/>
         <ul class="navbar-list" id="playlist-list">
-            <RouterLink to="/playlist/liao-zhu">Liao Zhu</RouterLink>
+            <RouterLink to="/playlist/content">Content</RouterLink>
             <RouterLink to="/playlist/projects">Projects</RouterLink>
             <RouterLink to="/user">Profile</RouterLink>
             <a href="../liaozhu.pdf" target="_blank">Resume</a>

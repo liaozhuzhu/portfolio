@@ -25,19 +25,12 @@
                     <p style="">Verified Artist</p>
                 </div>
                 <h1 class="artist-title">AIS SWE Intern</h1>
-                <p class="artist-listeners">33,000 monthly listeners</p>
+                <p class="artist-listeners">January 2023 - Present</p>
             </div>
         </div>
-        <div class="container-flex justify-content-left playlist-settings">
-            <a target="_blank" href="https://its.uiowa.edu/about/ais"><fa class="play-icon container-flex playlist-play" icon="fa-solid fa-play" style="opacity: 1"/></a>
-            <div class="artist-follow">FOLLOW</div>
-            <div class="container-flex justify-content-left" id="elipsis" @mouseover="togglePlaylistPopup" @mouseleave="closePlaylistPopup">
-                <fa icon="fa-solid fa-circle"/>
-                <fa icon="fa-solid fa-circle"/>
-                <fa icon="fa-solid fa-circle"/>
-                <p id="playlist-popup">Haven't thought this far yet...</p>
-            </div>
-        </div>
+
+        <ArtistNav/>
+        
         <div class="container-flex justify-content-left song-desc">
             <p>Recently, I've started as a Software Engineering Intern for my school's <a href="https://its.uiowa.edu/about/ais" target="_blank">ITS - Administrative System Information department</a>.
             <br/>
@@ -51,19 +44,16 @@
     </div>
 </template>
 <script>
+import ArtistNav from "../components/ArtistNav.vue";
+
 export default {
     created() {
         document.title = "Liao Zhu - ITS Administrative Information Systems Software Engineering Intern"
     },
+    components: {
+        ArtistNav,
+    },
     methods: {
-        togglePlaylistPopup() {
-            let playlistPopup = document.getElementById("playlist-popup");
-            playlistPopup.style.opacity=1;
-        },
-        closePlaylistPopup() {
-            let playlistPopup = document.getElementById("playlist-popup");
-            playlistPopup.style.opacity=0;
-        },
         toggleAccountDropdown() {
         this.accountIsShowing = !this.accountIsShowing;
         if (this.accountIsShowing) {

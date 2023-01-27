@@ -22,7 +22,7 @@
             <img src="../../static/images/home.png" style="object-fit: contain"/>
             <div class="column">
                 <p class="playlist-category">PLAYLIST</p>
-                <h1 class="playlist-title">Liao Zhu</h1>
+                <h1 class="playlist-title">Content</h1>
                 <p class="playlist-desc">View the different sections of my portfolio!</p>
                 <strong class="playlist-creator">Liao Zhu</strong>
             </div>
@@ -121,7 +121,7 @@
 export default {
     name: "LiaoZhu",
     created(){
-        document.title = "Liao Zhu - Liao Zhu"
+        document.title = "Liao Zhu - Content"
     },
     data() {
         return {

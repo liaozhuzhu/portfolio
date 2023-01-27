@@ -25,19 +25,10 @@
                     <p style="">Verified Artist</p>
                 </div>
                 <h1 class="artist-title">Math Instructor</h1>
-                <p class="artist-listeners">1,000,000 monthly listeners</p>
+                <p class="artist-listeners">October 2021 - August 2022</p>
             </div>
         </div>
-        <div class="container-flex justify-content-left playlist-settings">
-            <a target="_blank" href="https://www.mathnasium.com/"><fa class="play-icon container-flex playlist-play" icon="fa-solid fa-play" style="opacity: 1"/></a>
-            <div class="artist-follow">FOLLOW</div>
-            <div class="container-flex justify-content-left" id="elipsis" @mouseover="togglePlaylistPopup" @mouseleave="closePlaylistPopup">
-                <fa icon="fa-solid fa-circle"/>
-                <fa icon="fa-solid fa-circle"/>
-                <fa icon="fa-solid fa-circle"/>
-                <p id="playlist-popup">Haven't thought this far yet...</p>
-            </div>
-        </div>
+        <ArtistNav/>
         <div class="container-flex justify-content-left song-desc">
             <p>I worked at <a href="https://www.mathnasium.com/" target="_blank">Mathnasium</a> starting October 2021 to August 2022. Prior to being an instructor, I was a soccer referee. Though refereeing allowed me to gain so many valuable skills such as leadership, 
                 teamwork, and critical-fast thinking, it was much more stressful compared to being an instructor at Mathnasium.
@@ -65,9 +56,14 @@
     </div>
 </template>
 <script>
+import ArtistNav from "../components/ArtistNav.vue";
+
 export default {
     created() {
         document.title = "Liao Zhu - Mathnasium Instructor"
+    },
+    components: {
+        ArtistNav,
     },
     methods: {
         togglePlaylistPopup() {

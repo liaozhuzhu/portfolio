@@ -21,9 +21,9 @@
     <div class="container-flex column" id="home-container">
       <h1 class="greeting">{{ greeting }}</h1>
       <div class="container-grid home-playlist-container">
-        <RouterLink to="/playlist/liao-zhu" class="container-flex" @mouseover="handleHover(1)" @mouseleave="handleLeave(1)">
+        <RouterLink to="/playlist/content" class="container-flex" @mouseover="handleHover(1)" @mouseleave="handleLeave(1)">
           <img src="../../static/images/home.png"/>
-          <h1 class="home-playlist-title">Liao Zhu</h1>
+          <h1 class="home-playlist-title">Content</h1>
           <fa class="play-icon container-flex" icon="fa-solid fa-play"/>
         </RouterLink>
         <RouterLink to="/playlist/projects" class="container-flex" @mouseover="handleHover(2)" @mouseleave="handleLeave(2)">

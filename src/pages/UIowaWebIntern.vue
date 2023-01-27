@@ -25,19 +25,10 @@
                     <p style="">Verified Artist</p>
                 </div>
                 <h1 class="artist-title">UIowa Web Intern</h1>
-                <p class="artist-listeners">2,200 monthly listeners</p>
+                <p class="artist-listeners">June 2022 - January 2023</p>
             </div>
         </div>
-        <div class="container-flex justify-content-left playlist-settings">
-            <a target="_blank" href="https://engineering.uiowa.edu/"><fa class="play-icon container-flex playlist-play" icon="fa-solid fa-play" style="opacity: 1"/></a>
-            <div class="artist-follow">FOLLOW</div>
-            <div class="container-flex justify-content-left" id="elipsis" @mouseover="togglePlaylistPopup" @mouseleave="closePlaylistPopup">
-                <fa icon="fa-solid fa-circle"/>
-                <fa icon="fa-solid fa-circle"/>
-                <fa icon="fa-solid fa-circle"/>
-                <p id="playlist-popup">Haven't thought this far yet...</p>
-            </div>
-        </div>
+        <ArtistNav/>
         <div class="container-flex justify-content-left song-desc">
             <p>Starting since June 2022, I've been working as a web intern for UIowa's College of Engineering. 
             <br/>
@@ -53,17 +44,19 @@
             fulfilling for the position.
             <br/>
             <br/>
-            Starting Spring 2022, I will begin another position as a Software Engineer for the school's <a href="https://its.uiowa.edu/" target="_blank">ITS</a> Administrative Information Systems department.
-            For this position, I will use JavaScript and Java (and maybe AWS) which I am very excited for because I get to test my skills, and because
-            I get to code ( ๑‾̀◡‾́)(‾̀◡‾́ ๑).
             </p>
       </div>
     </div>
 </template>
 <script>
+import ArtistNav from "../components/ArtistNav.vue";
+
 export default {
     created() {
         document.title = "Liao Zhu - UIowa COE Web Intern"
+    },
+    components: {
+        ArtistNav
     },
     methods: {
         togglePlaylistPopup() {

@@ -1,0 +1,17 @@
+<template>
+    <div class="container-flex justify-content-left playlist-settings">
+            <a target="_blank" href="https://its.uiowa.edu/about/ais"><fa class="play-icon container-flex playlist-play" icon="fa-solid fa-play" style="opacity: 1"/></a>
+            <div class="artist-follow">FOLLOW</div>
+            <div class="container-flex justify-content-left" id="elipsis">
+                <fa icon="fa-solid fa-circle"/>
+                <fa icon="fa-solid fa-circle"/>
+                <fa icon="fa-solid fa-circle"/>
+            </div>
+        </div>
+</template>
+<script>
+export default {
+}
+</script>
+<style>
+</style>
