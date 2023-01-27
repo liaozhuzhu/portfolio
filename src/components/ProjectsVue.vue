@@ -27,16 +27,7 @@
                 <strong class="playlist-creator">Liao Zhu</strong>
             </div>
         </div>
-        <div class="container-flex justify-content-left playlist-settings">
-            <fa class="play-icon container-flex playlist-play" icon="fa-solid fa-play" style="opacity: 1"/>
-            <fa class="playlist-like" icon="fa-solid fa-heart" />
-            <div class="container-flex justify-content-left" id="elipsis" @mouseover="togglePlaylistPopup" @mouseleave="closePlaylistPopup">
-                <fa icon="fa-solid fa-circle"/>
-                <fa icon="fa-solid fa-circle"/>
-                <fa icon="fa-solid fa-circle"/>
-                <p id="playlist-popup">Haven't thought this far yet...</p>
-            </div>
-        </div>
+        <MusicNav liked="true" />
         <div class="playlist-keys container-flex">
             <div class="container-flex">
                 <p class="key-index">#</p>
@@ -68,6 +59,7 @@
 </div>
 </template>
 <script>
+import MusicNav from "../components/MusicNav.vue";
 import { projects } from '../projects.js';
 export default {
     created() {
@@ -77,6 +69,9 @@ export default {
         return {
             projects: projects
         }
+    },
+    components: {
+        MusicNav
     },
     methods: {
         toggleAccountDropdown() {

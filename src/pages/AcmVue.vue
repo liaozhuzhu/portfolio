@@ -27,16 +27,7 @@
                 <strong class="playlist-creator">Liao Zhu</strong>
             </div>
         </div>
-        <div class="container-flex justify-content-left playlist-settings">
-            <a target="_blank" href="https://acm.org.uiowa.edu/"><fa class="play-icon container-flex playlist-play" icon="fa-solid fa-play" style="opacity: 1"/></a>
-            <fa class="song-like" icon="fa-regular fa-heart" />
-            <div class="container-flex justify-content-left" id="elipsis" @mouseover="togglePlaylistPopup" @mouseleave="closePlaylistPopup">
-                <fa icon="fa-solid fa-circle"/>
-                <fa icon="fa-solid fa-circle"/>
-                <fa icon="fa-solid fa-circle"/>
-                <p id="playlist-popup">Haven't thought this far yet...</p>
-            </div>
-        </div>
+        <MusicNav/>
         <div class="container-flex justify-content-left song-desc">
             <p>ACM is a great place to learn about new advancements in the software world! At ACM, we learn more about classes, algorithm and data structure topics, LeetCode, and so much more.
             <br/>
@@ -51,13 +42,13 @@
 </div>
 </template>
 <script>
+import MusicNav from "../components/MusicNav.vue";
 export default {
     created() {
         document.title = "Liao Zhu - ACM"
     },
-    data() {
-        return {
-        }
+    components: {
+        MusicNav
     },
     methods: {
         toggleAccountDropdown() {
@@ -72,14 +63,6 @@ export default {
                 document.getElementById("account-dropdown-container").style.display="none";
             }
       },
-        togglePlaylistPopup() {
-            let playlistPopup = document.getElementById("playlist-popup");
-            playlistPopup.style.opacity=1;
-        },
-        closePlaylistPopup() {
-            let playlistPopup = document.getElementById("playlist-popup");
-            playlistPopup.style.opacity=0;
-        },
     }
 }
 </script>

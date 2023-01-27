@@ -26,16 +26,7 @@
                 <strong class="playlist-creator">Liao Zhu</strong>
             </div>
         </div>
-        <div class="container-flex justify-content-left playlist-settings">
-            <a target="_blank" href="https://github.com/liaozhuzhu/qit"><fa class="play-icon container-flex playlist-play" icon="fa-solid fa-play" style="opacity: 1"/></a>
-            <fa class="song-like" icon="fa-regular fa-heart" />
-            <div class="container-flex justify-content-left" id="elipsis" @mouseover="togglePlaylistPopup" @mouseleave="closePlaylistPopup">
-                <fa icon="fa-solid fa-circle"/>
-                <fa icon="fa-solid fa-circle"/>
-                <fa icon="fa-solid fa-circle"/>
-                <p id="playlist-popup">Haven't thought this far yet...</p>
-            </div>
-        </div>
+        <MusicNav/>
         <div class="container-flex justify-content-left song-desc">
             <p>QiT (pronounced "cheat"), was my first ever full stack application using Flask and MySQL. QiT was supposed to be a random blog posting, social media, with the incentive to 
                 be students posting questions and answers with each other. Each post could be liked, commented on, and shared with other users. Each user even had their own individual page 
@@ -54,9 +45,14 @@
     </div>
 </template>
 <script>
+import MusicNav from "../components/MusicNav.vue";
+
 export default {
     created() {
         document.title = "Liao Zhu - QiT"
+    },
+    components: {
+        MusicNav
     },
     methods: {
         togglePlaylistPopup() {

@@ -26,16 +26,7 @@
                 <strong class="playlist-creator">Liao Zhu</strong>
             </div>
         </div>
-        <div class="container-flex justify-content-left playlist-settings">
-            <a target="_blank" href="https://github.com/liaozhuzhu/clask"><fa class="play-icon container-flex playlist-play" icon="fa-solid fa-play" style="opacity: 1"/></a>
-            <fa class="song-like" icon="fa-regular fa-heart" />
-            <div class="container-flex justify-content-left" id="elipsis" @mouseover="togglePlaylistPopup" @mouseleave="closePlaylistPopup">
-                <fa icon="fa-solid fa-circle"/>
-                <fa icon="fa-solid fa-circle"/>
-                <fa icon="fa-solid fa-circle"/>
-                <p id="playlist-popup">Haven't thought this far yet...</p>
-            </div>
-        </div>
+        <MusicNav/>
         <div class="container-flex justify-content-left song-desc">
             <p>Nobody wants the gut wretching feeling that happens when you're too slow to write down the notes to whatever the professor is talking about.
             <br/>
@@ -51,9 +42,14 @@
     </div>
 </template>
 <script>
+import MusicNav from "../components/MusicNav.vue";
+
 export default {
     created() {
         document.title = "Liao Zhu - Clask"
+    },
+    components: {
+        MusicNav
     },
     methods: {
         togglePlaylistPopup() {

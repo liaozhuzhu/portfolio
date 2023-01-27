@@ -26,16 +26,7 @@
                 <strong class="playlist-creator">Liao Zhu</strong>
             </div>
         </div>
-        <div class="container-flex justify-content-left playlist-settings">
-            <a href="../user"><fa class="play-icon container-flex playlist-play" icon="fa-solid fa-play" style="opacity: 1"/></a>
-            <fa class="song-like" icon="fa-regular fa-heart" />
-            <div class="container-flex justify-content-left" id="elipsis" @mouseover="togglePlaylistPopup" @mouseleave="closePlaylistPopup">
-                <fa icon="fa-solid fa-circle"/>
-                <fa icon="fa-solid fa-circle"/>
-                <fa icon="fa-solid fa-circle"/>
-                <p id="playlist-popup">Haven't thought this far yet...</p>
-            </div>
-        </div>
+        <MusicNav/>
         <div class="container-flex justify-content-left song-desc">
             <p>My online portfolio verson 14,325,214. I wanted to make my portfolio more fun and less bland. One app I use all the time is Spotify. Whether I'm working, doing homework, going to the gym, or even walking, I'm always
             listening to Spotify. So this portfolio version is supposed to be a fun version of Spotify.
@@ -51,9 +42,14 @@
     </div>
 </template>
 <script>
+import MusicNav from "../components/MusicNav.vue";
+
 export default {
     created() {
         document.title = "Liao Zhu - My Portfolio"
+    },
+    components: {
+        MusicNav
     },
     methods: {
         togglePlaylistPopup() {

@@ -26,16 +26,7 @@
                 <strong class="playlist-creator">Liao Zhu</strong>
             </div>
         </div>
-        <div class="container-flex justify-content-left playlist-settings">
-            <a target="_blank" href="https://github.com/liaozhuzhu/statipy"><fa class="play-icon container-flex playlist-play" icon="fa-solid fa-play" style="opacity: 1"/></a>
-            <fa class="song-like" icon="fa-regular fa-heart" />
-            <div class="container-flex justify-content-left" id="elipsis" @mouseover="togglePlaylistPopup" @mouseleave="closePlaylistPopup">
-                <fa icon="fa-solid fa-circle"/>
-                <fa icon="fa-solid fa-circle"/>
-                <fa icon="fa-solid fa-circle"/>
-                <p id="playlist-popup">Haven't thought this far yet...</p>
-            </div>
-        </div>
+        <MusicNav/>
         <div class="container-flex justify-content-left song-desc">
             <p>As you know, I love Spotify. Another app I love is Discord. My friends and I used these apps so much during Covid, always showing each other random Spotify songs,
                 or even our own stats trough Discord. One issue though is that we would have to go to the actual Spotify app and get these pieces of information and then paste them into the Discord channel.
@@ -51,9 +42,14 @@
     </div>
 </template>
 <script>
+import MusicNav from "../components/MusicNav.vue";
+
 export default {
     created() {
         document.title = "Liao Zhu - Statipy"
+    },
+    components: {
+        MusicNav,
     },
     methods: {
         togglePlaylistPopup() {
