@@ -31,7 +31,7 @@
         <div class="navbar-mobile container-flex" style="display: none">
             <RouterLink to="/"><fa icon="fa-solid fa-home"></fa></RouterLink>
             <RouterLink to="/search"><fa icon="fa-solid fa-magnifying-glass"></fa></RouterLink>
-            <RouterLink to="/playlist/projects"><fa icon="fa-solid fa-bars"></fa></RouterLink>
+            <RouterLink to="/playlist/content"><fa icon="fa-solid fa-bars"></fa></RouterLink>
         </div>
     </div>
 </template>
