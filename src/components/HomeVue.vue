@@ -103,7 +103,6 @@ export default {
         }
         });
         let track = response.data["recenttracks"]["track"];
-        console.log(track.length);
         if (track.length == 7) {
           for (let i = 1; i < track.length - 1; i++) {
             this.recentTracks.push({
