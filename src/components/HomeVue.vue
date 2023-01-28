@@ -103,15 +103,27 @@ export default {
         }
         });
         let track = response.data["recenttracks"]["track"];
-
-        for (let i = 1; i < track.length - 1; i++) {
-          this.recentTracks.push({
-            title: track[i]['name'],
-            artist: track[i]['artist']['#text'],
-            src: track[i]['image'][3]['#text'], 
-            url: track[i]['url'],
-          }) 
+        console.log(track.length);
+        if (track.length == 7) {
+          for (let i = 1; i < track.length - 1; i++) {
+            this.recentTracks.push({
+              title: track[i]['name'],
+              artist: track[i]['artist']['#text'],
+              src: track[i]['image'][3]['#text'], 
+              url: track[i]['url'],
+            }) 
+          }
+        } else {
+          for (let i = 0; i < track.length - 1; i++) {
+            this.recentTracks.push({
+              title: track[i]['name'],
+              artist: track[i]['artist']['#text'],
+              src: track[i]['image'][3]['#text'], 
+              url: track[i]['url'],
+            }) 
+          }
         }
+        
       } catch (error) {
         console.error(error);
       }
