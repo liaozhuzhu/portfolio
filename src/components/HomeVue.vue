@@ -64,6 +64,19 @@
         <fa class="play-icon container-flex" id="track-play-icon" icon="fa-solid fa-play"/>
       </a>
     </div>
+    <br/>
+    <br/>
+    <h1 class="section-title">Top Artists</h1>
+    <div class="container-grid profile-cards-container">
+      <a :href="artist.url" target="_blank" class="container-flex column justify-content-left profile-cards" v-for="artist in topArtists" :key="artist.src">
+        <img :src="`${ artist.src }`"/>
+        <div class="container-flex column justify-content-left">
+          <h1>{{ artist.name }}</h1>
+          <p id="recent-artist">Artist</p>
+        </div>
+        <fa class="play-icon container-flex" id="track-play-icon" icon="fa-solid fa-play"/>
+       </a>
+    </div>
   </div>
 </template>
 
@@ -91,24 +104,38 @@ export default {
         timestamp: 0,
         greeting: "",
         recentTracks: [],
+        topArtists: []
       }
     },
     methods: {
       async getAuth() {
       try {
-        const response = await axios.get('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=liaozhuzhu&api_key=25edc6c4efea0c062a69a540f974de60&format=json', {
+        const response = await axios.get('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=liaozhuzhu&limit=6&api_key=25edc6c4efea0c062a69a540f974de60&format=json', {
           headers: {
             'Accept': 'application/json;odata=verbose',
         }
         });
+        const artistResponse = await axios.get('https://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=liaozhuzhu&limit=5&api_key=25edc6c4efea0c062a69a540f974de60&format=json', {
+          headers: {
+            'Accept': 'application/json;odata=verbose',
+          }
+        });
         let track = response.data["recenttracks"]["track"];
-        for (let i = 1; i < 6; i++) {
+        let artist = artistResponse.data["topartists"]["artist"];
+        for (let i = 1; i < track.length; i++) {
           this.recentTracks.push({
             title: track[i]['name'],
             artist: track[i]['artist']['#text'],
             src: track[i]['image'][3]['#text'], 
             url: track[i]['url'],
           }) 
+        }
+        for (let i = 0; i < artist.length; i++) {
+          this.topArtists.push({
+            name: artist[i]['name'],
+            src: artist[i]['image'][3]['#text'],
+            url: artist[i]['url']
+          })
         }
       } catch (error) {
         console.error(error);

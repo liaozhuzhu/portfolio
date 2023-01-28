@@ -56,7 +56,7 @@ export default {
     methods: {
         async getPlaying() {
             try {
-                const response = await axios.get('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=liaozhuzhu&api_key=25edc6c4efea0c062a69a540f974de60&format=json');
+                const response = await axios.get('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=liaozhuzhu&limit=5&api_key=25edc6c4efea0c062a69a540f974de60&format=json');
                 let track = response.data["recenttracks"]["track"];
                 if ("@attr" in track[0]) {
                     this.title = track[0]['name'];
@@ -91,7 +91,7 @@ export default {
         this.getPlaying();
         window.setInterval(() => {
             this.getPlaying();
-        }, 500);
+        }, 1000);
     }
 }
 </script>
