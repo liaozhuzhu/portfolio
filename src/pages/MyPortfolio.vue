@@ -26,7 +26,7 @@
                 <strong class="playlist-creator">Liao Zhu</strong>
             </div>
         </div>
-        <MusicNav/>
+        <MusicNav link="https://github.com/liaozhuzhu/portfolio"/>
         <div class="container-flex justify-content-left song-desc">
             <p>My online portfolio verson 14,325,214. I wanted to make my portfolio more fun and less bland. One app I use all the time is Spotify. Whether I'm working, doing homework, going to the gym, or even walking, I'm always
             listening to Spotify. So this portfolio version is supposed to be a fun version of Spotify.

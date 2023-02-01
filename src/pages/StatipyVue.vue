@@ -26,7 +26,7 @@
                 <strong class="playlist-creator">Liao Zhu</strong>
             </div>
         </div>
-        <MusicNav/>
+        <MusicNav link="https://github.com/liaozhuzhu/statipy"/>
         <div class="container-flex justify-content-left song-desc">
             <p>As you know, I love Spotify. Another app I love is Discord. My friends and I used these apps so much during Covid, always showing each other random Spotify songs,
                 or even our own stats trough Discord. One issue though is that we would have to go to the actual Spotify app and get these pieces of information and then paste them into the Discord channel.

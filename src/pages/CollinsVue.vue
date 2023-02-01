@@ -28,7 +28,7 @@
                 <p class="artist-listeners">May 2023</p>
             </div>
         </div>
-        <ArtistNav/>
+        <ArtistNav link="https://www.collinsaerospace.com/"/>
         <div class="container-flex justify-content-left song-desc">
             <p>
                 Come back May 30th, 2023!

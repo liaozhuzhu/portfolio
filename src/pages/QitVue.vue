@@ -26,7 +26,7 @@
                 <strong class="playlist-creator">Liao Zhu</strong>
             </div>
         </div>
-        <MusicNav/>
+        <MusicNav link="https://github.com/liaozhuzhu/qit"/>
         <div class="container-flex justify-content-left song-desc">
             <p>QiT (pronounced "cheat"), was my first ever full stack application using Flask and MySQL. QiT was supposed to be a random blog posting, social media, with the incentive to 
                 be students posting questions and answers with each other. Each post could be liked, commented on, and shared with other users. Each user even had their own individual page 

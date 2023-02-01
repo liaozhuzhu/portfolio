@@ -29,7 +29,7 @@
             </div>
         </div>
 
-        <ArtistNav/>
+        <ArtistNav link="https://its.uiowa.edu/about/ais"/>
         
         <div class="container-flex justify-content-left song-desc">
             <p>Recently, I've started as a Software Engineering Intern for my school's <a href="https://its.uiowa.edu/about/ais" target="_blank">ITS - Administrative System Information department</a>.

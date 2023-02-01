@@ -28,7 +28,7 @@
                 <p class="artist-listeners">June 2022 - January 2023</p>
             </div>
         </div>
-        <ArtistNav/>
+        <ArtistNav link="https://engineering.uiowa.edu/"/>
         <div class="container-flex justify-content-left song-desc">
             <p>Starting since June 2022, I've been working as a web intern for UIowa's College of Engineering. 
             <br/>

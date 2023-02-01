@@ -26,7 +26,7 @@
                 <strong class="playlist-creator">Liao Zhu</strong>
             </div>
         </div>
-        <MusicNav/>
+        <MusicNav link="https://github.com/liaozhuzhu/clask"/>
         <div class="container-flex justify-content-left song-desc">
             <p>Nobody wants the gut wretching feeling that happens when you're too slow to write down the notes to whatever the professor is talking about.
             <br/>

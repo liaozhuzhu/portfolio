@@ -27,7 +27,7 @@
                 <strong class="playlist-creator">Liao Zhu</strong>
             </div>
         </div>
-        <MusicNav />
+        <MusicNav link="https://robotics.org.uiowa.edu/"/>
         <div class="container-flex justify-content-left song-desc">
             <p>I joined the robotics team at Iowa starting my Sophmore year. During this time, I've managed to implement a GPS map visualizer using Google Maps Api.
             <br/>

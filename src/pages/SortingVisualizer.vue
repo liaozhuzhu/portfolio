@@ -26,7 +26,7 @@
                 <strong class="playlist-creator">Liao Zhu</strong>
             </div>
         </div>
-        <MusicNav/>
+        <MusicNav link="https://liaozhuzhu.github.io/sort/"/>
         <div class="container-flex justify-content-left song-desc">
             <p>I made this visualizer to get a better grasp of DOM manipulation and to improve my javascript skills.
             <br/>

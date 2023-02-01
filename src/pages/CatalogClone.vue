@@ -26,7 +26,7 @@
                 <strong class="playlist-creator">Liao Zhu</strong>
             </div>
         </div>
-        <MusicNav/>
+        <MusicNav link="https://vueitsproject.netlify.app/"/>
         <div class="container-flex justify-content-left song-desc">
             <p>This project was an interview project given to me for a position at my school. It has three versions, a Vue version, a vanilla JS version, and a Java version.
             <br/>

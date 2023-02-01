@@ -27,7 +27,7 @@
                 <strong class="playlist-creator">Liao Zhu</strong>
             </div>
         </div>
-        <MusicNav/>
+        <MusicNav link="https://acm.org.uiowa.edu/"/>
         <div class="container-flex justify-content-left song-desc">
             <p>ACM is a great place to learn about new advancements in the software world! At ACM, we learn more about classes, algorithm and data structure topics, LeetCode, and so much more.
             <br/>
