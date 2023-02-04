@@ -131,7 +131,6 @@ a {
 
 .playing-header img {
     width: 55px;
-    border-radius: 6px;
 }
 
 .playing-header h1 {
@@ -286,6 +285,10 @@ a {
   .playing-header {
     max-height: 30px;
   }
+
+  .playing-header img {
+    border-radius: 4px;
+    }
 }
 @media screen and (max-width: 1000px) {
     .playing-header h1{
