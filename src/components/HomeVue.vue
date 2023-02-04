@@ -187,7 +187,7 @@ export default {
 .profile-cards img{
   width: 175px;
   height: 175px;
-  border-radius: 50%;
+  border-radius: 6px;
   margin-top: 20px;
   margin-left: 0px;
   margin-right: 0px;

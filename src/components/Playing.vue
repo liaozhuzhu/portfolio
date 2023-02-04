@@ -131,6 +131,7 @@ a {
 
 .playing-header img {
     width: 55px;
+    border-radius: 6px;
 }
 
 .playing-header h1 {
