@@ -35,7 +35,7 @@
                 <br/>
                 <br/>
                 I will be honest and say that I cheaped out on hosting it on the Chrome Web Store only because my OpenAI API key expires in 3
-                months and I don't want to pay for it. If you want to try it out, you can download the build folder <a href="https://drive.google.com/drive/folders/1_uRfZIx63pfoYMB-g6q1re963QQT7OEL" target="_blank">here</a>
+                months and I don't want to pay for it. If you want to try it out, you can download the build folder <a href="https://drive.google.com/drive/folders/1zpp6Aw_WihLrnEF9Jc6pgYVFPrDAEDR7" target="_blank">here</a>
                 and upload it at <a href="chrome://extensions/" target="_blank">chrome://extensions/</a> under developer mode.
                 <br/>
                 <br/>
