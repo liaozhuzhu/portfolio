@@ -83,6 +83,10 @@ export default {
                     url: "/track/my-portfolio"
                 },
                 {
+                    title: "SayIT!",
+                    url: "/track/sayit"
+                },
+                {
                     title: "Tiktok Video Generator Bot",
                     url: "/track/tiktok-video-generator"
                 },

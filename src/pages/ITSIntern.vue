@@ -35,10 +35,12 @@
             <p>Recently, I've started as a Software Engineering Intern for my school's <a href="https://its.uiowa.edu/about/ais" target="_blank">ITS - Administrative System Information department</a>.
             <br/>
             <br/>
-            For this position, I put my Java and JavaScript skills to the test. Hopefully I will be able to learn how to integrate my code with AWS features.
+            For this position, I have converted and implemented legacy Java code to a Java script using Gradle. Currently, I am learning Java Play 
+            to start working on Otto, an admin dashboard and tooling system for the school's ITS staff.
             <br/>
             <br/>
             Not much to be said for this position as I am just starting, but stay tuned for constant updates as I get more experience with this position!
+            In the long run, I will expect to have learned and implemented AWS and Docker.
             </p>
       </div>
     </div>

@@ -39,7 +39,7 @@
           <br/>
           <br/>
           Some of my most proficient skills include Java, Python, and JavaScript. I have experience with Vue, React, Node, and SQL but have much more to learn!
-          Currently, I am getting more experienced with Vue and so far I love it ❤️. What I don't love is CSS 👎.
+          Currently, I am starting to learn more about cloud services such as AWS, and am learning how to integrate Docker with my projects.
           <br/>
           <br/>
           When I'm not watching anime, or playing with my younger brother, I'm coding and listening to music (thus why this site is inspired by <a href="https://open.spotify.com/" target="_blank">Spotify</a>).

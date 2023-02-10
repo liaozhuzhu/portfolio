@@ -58,6 +58,10 @@ export const searchPages = [
                 title: "Tiktok Video Generator Bot"
             },
             {
+                url: "/track/sayit",
+                title: "SayIT!"
+            },
+            {
                 url: "/track/my-portfolio",
                 title: "My Portfolio"
             }
@@ -161,6 +165,15 @@ export const searchPages = [
             {
                 url: "/track/tiktok-video-generator",
                 title: "Tiktok Video Generator Bot"
+            }
+        ]
+    },
+    {
+        pageTitle: "sayit!",
+        href: [
+            {
+                url: "/track/sayit",
+                title: "SayIT!",
             }
         ]
     },
