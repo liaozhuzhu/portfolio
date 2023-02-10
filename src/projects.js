@@ -1,5 +1,13 @@
 export const projects = [
     {
+        title: "SayIT!",
+        page: "/track/sayit",
+        src: "sayit.png",
+        languages: [["ReactJS"], ["OpenAI"]],
+        code: "https://github.com/liaozhuzhu/sayit",
+        time: "1:42",
+    },
+    {
         title: "TikTok Video Generator",
         page: "/track/tiktok-video-generator",
         src: "tiktok.jpeg",
