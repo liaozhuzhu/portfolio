@@ -58,7 +58,7 @@ ul {
 }
 
 .section {
-  margin-left: 300px;
+  margin-left: 250px;
   background-image: linear-gradient(to bottom right, rgb(34, 18, 54), rgb(17, 11, 20),rgb(10, 10, 10));
   color: white;
   padding-bottom: 130px;
@@ -70,7 +70,7 @@ ul {
 
 .navbar {
   list-style-type: none;
-  min-width: 300px;
+  min-width: 250px;
   background-color: black;
   position: fixed;
   height: 100%;
